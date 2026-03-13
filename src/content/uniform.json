@@ -1,0 +1,14 @@
+{
+  "howToDonate": "Donations of clean, outgrown uniform items are appreciated. We can take Aldryngton jumpers, cardigans, trousers, shorts, shirts, skirts, dresses and summer dresses. Donations should please be laundered and name labels removed.",
+  "howToBuy": "Second Hand Uniform Sales are held several times a year. Email uniform@aldryngtonpta.com to check availability.",
+  "prices": [
+    { "item": "Aldryngton jumpers / cardigans", "price": "£1.50–£3" },
+    { "item": "Other jumpers / cardigans", "price": "£1.50" },
+    { "item": "Shirts / polo shirts", "price": "50p–£1" },
+    { "item": "Trousers", "price": "£1.50" },
+    { "item": "Skirts / Skorts", "price": "£1.50" },
+    { "item": "Shorts", "price": "£1.50" },
+    { "item": "Dresses", "price": "£1.50" },
+    { "item": "PE Kit", "price": "50p" }
+  ]
+}

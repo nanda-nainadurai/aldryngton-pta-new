@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHeader from '../../components/PageHeader.astro';
 import Card from '../../components/Card.astro';
 import { url } from '../../utils';
+import contactContent from '../../content/contact.json';
 ---
 
 <BaseLayout title="Contact Us">
@@ -28,8 +29,8 @@ import { url } from '../../utils';
           <div>
             <h2 class="text-xl font-bold text-gray-900 font-heading mb-1">General Enquiries</h2>
             <p class="text-gray-600 mb-2">For any PTA-related questions, reach out to us at:</p>
-            <a href="mailto:ptaofficers@aldryngtonpta.com" class="text-lg font-semibold text-primary-600 hover:text-primary-800 transition-colors underline decoration-primary-300 hover:decoration-primary-600">
-              ptaofficers@aldryngtonpta.com
+            <a href={`mailto:${contactContent.generalEmail}`} class="text-lg font-semibold text-primary-600 hover:text-primary-800 transition-colors underline decoration-primary-300 hover:decoration-primary-600">
+              {contactContent.generalEmail}
             </a>
           </div>
         </div>
@@ -47,9 +48,9 @@ import { url } from '../../utils';
               </svg>
             </div>
             <span class="inline-block text-xs font-semibold text-primary-700 bg-primary-100 rounded-full px-3 py-1 mb-3">Chair</span>
-            <h3 class="text-lg font-bold text-gray-900 font-heading">Freya O'Mara</h3>
-            <a href="mailto:chair@aldryngtonpta.com" class="text-sm text-primary-600 hover:text-primary-800 transition-colors break-all">
-              chair@aldryngtonpta.com
+            <h3 class="text-lg font-bold text-gray-900 font-heading">{contactContent.officers[0].name}</h3>
+            <a href={`mailto:${contactContent.officers[0].email}`} class="text-sm text-primary-600 hover:text-primary-800 transition-colors break-all">
+              {contactContent.officers[0].email}
             </a>
           </div>
         </Card>
@@ -61,9 +62,9 @@ import { url } from '../../utils';
               </svg>
             </div>
             <span class="inline-block text-xs font-semibold text-accent-700 bg-accent-100 rounded-full px-3 py-1 mb-3">Vice Chair</span>
-            <h3 class="text-lg font-bold text-gray-900 font-heading">Tina Shepherd</h3>
-            <a href="mailto:vicechair@aldryngtonpta.com" class="text-sm text-accent-600 hover:text-accent-800 transition-colors break-all">
-              vicechair@aldryngtonpta.com
+            <h3 class="text-lg font-bold text-gray-900 font-heading">{contactContent.officers[1].name}</h3>
+            <a href={`mailto:${contactContent.officers[1].email}`} class="text-sm text-accent-600 hover:text-accent-800 transition-colors break-all">
+              {contactContent.officers[1].email}
             </a>
           </div>
         </Card>
@@ -75,9 +76,9 @@ import { url } from '../../utils';
               </svg>
             </div>
             <span class="inline-block text-xs font-semibold text-primary-700 bg-primary-100 rounded-full px-3 py-1 mb-3">Treasurer</span>
-            <h3 class="text-lg font-bold text-gray-900 font-heading">Narsing Chennamaneni</h3>
-            <a href="mailto:treasurer@aldryngtonpta.com" class="text-sm text-primary-600 hover:text-primary-800 transition-colors break-all">
-              treasurer@aldryngtonpta.com
+            <h3 class="text-lg font-bold text-gray-900 font-heading">{contactContent.officers[2].name}</h3>
+            <a href={`mailto:${contactContent.officers[2].email}`} class="text-sm text-primary-600 hover:text-primary-800 transition-colors break-all">
+              {contactContent.officers[2].email}
             </a>
           </div>
         </Card>
@@ -89,9 +90,9 @@ import { url } from '../../utils';
               </svg>
             </div>
             <span class="inline-block text-xs font-semibold text-accent-700 bg-accent-100 rounded-full px-3 py-1 mb-3">Secretary</span>
-            <h3 class="text-lg font-bold text-gray-900 font-heading">Adam Luk</h3>
-            <a href="mailto:secretary@aldryngtonpta.com" class="text-sm text-accent-600 hover:text-accent-800 transition-colors break-all">
-              secretary@aldryngtonpta.com
+            <h3 class="text-lg font-bold text-gray-900 font-heading">{contactContent.officers[3].name}</h3>
+            <a href={`mailto:${contactContent.officers[3].email}`} class="text-sm text-accent-600 hover:text-accent-800 transition-colors break-all">
+              {contactContent.officers[3].email}
             </a>
           </div>
         </Card>

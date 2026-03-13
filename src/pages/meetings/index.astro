@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHeader from '../../components/PageHeader.astro';
 import { url } from '../../utils';
+import meetingsData from '../../content/meetings.json';
 ---
 
 <BaseLayout title="PTA Meetings">
@@ -14,9 +15,7 @@ import { url } from '../../utils';
   <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
     <div class="prose prose-lg max-w-none mb-10">
       <p class="text-gray-700 text-lg leading-relaxed">
-        As a parent of a child at Aldryngton Primary School you are automatically a member of the
-        PTA and as such you can attend meetings, vote on proposals and make suggestions for spending
-        or raising funds.
+        {meetingsData.content}
       </p>
     </div>
 
@@ -30,7 +29,7 @@ import { url } from '../../utils';
         </div>
         <div>
           <h2 class="text-xl font-bold text-primary-900 font-heading mb-1">Date of Next Meeting</h2>
-          <p class="text-2xl font-extrabold text-primary-700 font-heading">11th March 2026</p>
+          <p class="text-2xl font-extrabold text-primary-700 font-heading">{meetingsData.nextMeetingDate}</p>
           <p class="text-sm text-primary-600 mt-2">All parents and carers are welcome to attend.</p>
         </div>
       </div>

@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHeader from '../../components/PageHeader.astro';
 import { url } from '../../utils';
+import fundraisingContent from '../../content/fundraising.json';
 ---
 
 <BaseLayout title="Fundraising">
@@ -25,7 +26,7 @@ import { url } from '../../utils';
           </div>
           <div>
             <p class="text-gray-700 leading-relaxed">
-              If you would like to download any of the dates listed below to your electronic calendar you can do so via the school calendar in the Parents section of the School Website:
+              {fundraisingContent.calendarInfo}
             </p>
             <a
               href="https://aldryngton.wokingham.sch.uk/home/parents/calendar/"
@@ -56,7 +57,7 @@ import { url } from '../../utils';
           <div class="flex-1">
             <h3 class="text-xl font-bold text-gray-900 font-heading mb-3">Help Us Save the Pool!</h3>
             <p class="text-gray-700 leading-relaxed mb-4">
-              Our beloved pool needs an upgrade! Our pool was hand dug by parents and teachers in the 1970s and has been a vital facility for all these years. Help us finish the update by donating here.
+              {fundraisingContent.poolCampaign}
             </p>
             <a
               href="https://www.crowdfunder.co.uk"

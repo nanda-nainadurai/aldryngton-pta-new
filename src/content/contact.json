@@ -1,0 +1,20 @@
+{
+  "generalEmail": "ptaofficers@aldryngtonpta.com",
+  "officers": [
+    { "role": "Chair", "name": "Freya O'Mara", "email": "chair@aldryngtonpta.com" },
+    { "role": "Vice Chair", "name": "Tina Shepherd", "email": "vicechair@aldryngtonpta.com" },
+    { "role": "Treasurer", "name": "Narsing Chennamaneni", "email": "treasurer@aldryngtonpta.com" },
+    { "role": "Secretary", "name": "Adam Luk", "email": "secretary@aldryngtonpta.com" }
+  ],
+  "eventTeams": [
+    { "team": "Bake Sales", "email": "cakesales@aldryngtonpta.com" },
+    { "team": "Discos", "email": "disco@aldryngtonpta.com" },
+    { "team": "Egg Hunts", "email": "egghunt@aldryngtonpta.com" },
+    { "team": "Pool Club", "email": "pool@aldryngtonpta.com" },
+    { "team": "Quiz Nights", "email": "quiz@aldryngtonpta.com" },
+    { "team": "Uniforms", "email": "uniform@aldryngtonpta.com" },
+    { "team": "Santa Runs", "email": "santarun@aldryngtonpta.com" },
+    { "team": "Try a Tri", "email": "tryatri@aldryngtonpta.com" },
+    { "team": "Coffee Mornings", "email": "coffeemornings@aldryngtonpta.com" }
+  ]
+}

@@ -2,17 +2,9 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHeader from '../../components/PageHeader.astro';
 import { url } from '../../utils';
+import uniformContent from '../../content/uniform.json';
 
-const pricing = [
-  { item: 'Aldryngton jumpers / cardigans', price: '\u00A31.50\u2013\u00A33' },
-  { item: 'Other jumpers / cardigans', price: '\u00A31.50' },
-  { item: 'Shirts / polo shirts', price: '50p\u2013\u00A31' },
-  { item: 'Trousers', price: '\u00A31.50' },
-  { item: 'Skirts / Skorts', price: '\u00A31.50' },
-  { item: 'Shorts', price: '\u00A31.50' },
-  { item: 'Dresses', price: '\u00A31.50' },
-  { item: 'PE Kit', price: '50p' },
-];
+const pricing = uniformContent.prices;
 ---
 
 <BaseLayout title="Second Hand Uniform">
@@ -31,9 +23,7 @@ const pricing = [
       <h2 class="text-2xl font-bold text-gray-900 font-heading mb-4">How to Donate</h2>
       <div class="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 md:p-8">
         <p class="text-gray-700 leading-relaxed">
-          Donations of clean, outgrown uniform items are appreciated. We can take Aldryngton
-          jumpers, cardigans, trousers, shorts, shirts, skirts, dresses and summer dresses.
-          Donations should please be laundered and name labels removed.
+          {uniformContent.howToDonate}
         </p>
       </div>
     </section>
@@ -43,11 +33,7 @@ const pricing = [
       <h2 class="text-2xl font-bold text-gray-900 font-heading mb-4">How to Buy</h2>
       <div class="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 md:p-8">
         <p class="text-gray-700 leading-relaxed">
-          Second Hand Uniform Sales are held several times a year. Email
-          <a href="mailto:uniform@aldryngtonpta.com" class="text-primary-600 hover:text-primary-700 font-semibold underline underline-offset-2">
-            uniform@aldryngtonpta.com
-          </a>
-          to check availability.
+          {uniformContent.howToBuy}
         </p>
       </div>
     </section>
