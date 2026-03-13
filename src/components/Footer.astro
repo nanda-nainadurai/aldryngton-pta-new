@@ -1,4 +1,6 @@
 ---
+import { url } from '../utils';
+
 const currentYear = new Date().getFullYear();
 ---
 
@@ -25,11 +27,11 @@ const currentYear = new Date().getFullYear();
       <div>
         <h3 class="text-white font-semibold mb-4 font-heading">Quick Links</h3>
         <ul class="space-y-2 text-sm">
-          <li><a href="/about/" class="hover:text-primary-400 transition-colors">PTA Details</a></li>
-          <li><a href="/about/contact/" class="hover:text-primary-400 transition-colors">Contact Us</a></li>
-          <li><a href="/meetings/" class="hover:text-primary-400 transition-colors">Meetings</a></li>
-          <li><a href="/fundraisers/" class="hover:text-primary-400 transition-colors">Fundraising</a></li>
-          <li><a href="/pool-club/" class="hover:text-primary-400 transition-colors">Pool Club</a></li>
+          <li><a href={url('/about/')} class="hover:text-primary-400 transition-colors">PTA Details</a></li>
+          <li><a href={url('/about/contact/')} class="hover:text-primary-400 transition-colors">Contact Us</a></li>
+          <li><a href={url('/meetings/')} class="hover:text-primary-400 transition-colors">Meetings</a></li>
+          <li><a href={url('/fundraisers/')} class="hover:text-primary-400 transition-colors">Fundraising</a></li>
+          <li><a href={url('/pool-club/')} class="hover:text-primary-400 transition-colors">Pool Club</a></li>
         </ul>
       </div>
 
@@ -37,11 +39,11 @@ const currentYear = new Date().getFullYear();
       <div>
         <h3 class="text-white font-semibold mb-4 font-heading">Events</h3>
         <ul class="space-y-2 text-sm">
-          <li><a href="/events/try-a-tri/" class="hover:text-primary-400 transition-colors">Try a Tri</a></li>
-          <li><a href="/events/santas-grotto/" class="hover:text-primary-400 transition-colors">Santa's Grotto</a></li>
-          <li><a href="/events/uniform/" class="hover:text-primary-400 transition-colors">Second Hand Uniform</a></li>
-          <li><a href="/events/circus/" class="hover:text-primary-400 transition-colors">Circus</a></li>
-          <li><a href="/about/match-funding/" class="hover:text-primary-400 transition-colors">Match Funding</a></li>
+          <li><a href={url('/events/try-a-tri/')} class="hover:text-primary-400 transition-colors">Try a Tri</a></li>
+          <li><a href={url('/events/santas-grotto/')} class="hover:text-primary-400 transition-colors">Santa's Grotto</a></li>
+          <li><a href={url('/events/uniform/')} class="hover:text-primary-400 transition-colors">Second Hand Uniform</a></li>
+          <li><a href={url('/events/circus/')} class="hover:text-primary-400 transition-colors">Circus</a></li>
+          <li><a href={url('/about/match-funding/')} class="hover:text-primary-400 transition-colors">Match Funding</a></li>
         </ul>
       </div>
 

@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHeader from '../../components/PageHeader.astro';
+import { url } from '../../utils';
 
 const recentAGMs = [
   { date: '17 Sep 2025', title: "PTA AGM — Treasurer\u2019s Report", file: '20250917-pta-agm-treasurers-report' },
@@ -75,7 +76,7 @@ const olderAGMs: Record<string, { date: string; title: string }[]> = {
   <PageHeader
     title="Annual General Meeting"
     breadcrumbs={[
-      { label: 'Meetings', href: '/meetings' },
+      { label: 'Meetings', href: url('/meetings') },
       { label: 'AGM' },
     ]}
   />

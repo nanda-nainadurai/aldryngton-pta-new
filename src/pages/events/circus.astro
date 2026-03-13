@@ -1,13 +1,14 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHeader from '../../components/PageHeader.astro';
+import { url } from '../../utils';
 ---
 
 <BaseLayout title="Circus">
   <PageHeader
     title="Circus"
     breadcrumbs={[
-      { label: 'Events', href: '/events/' },
+      { label: 'Events', href: url('/events/') },
       { label: 'Circus' },
     ]}
   />

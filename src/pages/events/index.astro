@@ -1,29 +1,30 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHeader from '../../components/PageHeader.astro';
+import { url } from '../../utils';
 
 const events = [
   {
     title: 'Second Hand Uniform',
-    href: '/events/uniform/',
+    href: url('/events/uniform/'),
     description: 'Pick up affordable school uniform items or donate outgrown clothing. Sales are held several times a year.',
     icon: '👕',
   },
   {
     title: 'Try a Tri',
-    href: '/events/try-a-tri/',
+    href: url('/events/try-a-tri/'),
     description: 'A fun triathlon for Aldryngton pupils featuring swimming, cycling and running. Open to all year groups.',
     icon: '🏊',
   },
   {
     title: "Santa's Grotto",
-    href: '/events/santas-grotto/',
+    href: url('/events/santas-grotto/'),
     description: 'Experience the magic of Christmas with a visit to Santa at Aldryngton. Every child receives a special gift.',
     icon: '🎅',
   },
   {
     title: 'Circus',
-    href: '/events/circus/',
+    href: url('/events/circus/'),
     description: "Happy's Circus brings an all-human, family-friendly spectacular to Aldryngton for a magical evening.",
     icon: '🎪',
   },

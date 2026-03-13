@@ -1,13 +1,14 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHeader from '../../components/PageHeader.astro';
+import { url } from '../../utils';
 ---
 
 <BaseLayout title="Forms, Templates & Documents">
   <PageHeader
     title="Forms, Templates & Documents"
     breadcrumbs={[
-      { label: 'Fundraising', href: '/fundraisers/' },
+      { label: 'Fundraising', href: url('/fundraisers/') },
       { label: 'Forms & Docs' },
     ]}
   />
@@ -42,7 +43,7 @@ import PageHeader from '../../components/PageHeader.astro';
       <!-- Back Link -->
       <div class="mt-8">
         <a
-          href="/fundraisers/"
+          href={url('/fundraisers/')}
           class="inline-flex items-center gap-2 text-sm font-semibold text-primary-600 hover:text-primary-700 transition-colors"
         >
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

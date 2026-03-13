@@ -1,36 +1,38 @@
 ---
+import { url } from '../utils';
+
 const currentPath = Astro.url.pathname;
 
 const navItems = [
-  { label: 'Home', href: '/' },
-  { label: 'About', href: '/about/', children: [
-    { label: 'PTA Details', href: '/about/' },
-    { label: 'Contact', href: '/about/contact/' },
-    { label: 'Match Funding', href: '/about/match-funding/' },
+  { label: 'Home', href: url('/') },
+  { label: 'About', href: url('/about/'), children: [
+    { label: 'PTA Details', href: url('/about/') },
+    { label: 'Contact', href: url('/about/contact/') },
+    { label: 'Match Funding', href: url('/about/match-funding/') },
   ]},
-  { label: 'Meetings', href: '/meetings/', children: [
-    { label: 'Overview', href: '/meetings/' },
-    { label: 'Meeting Minutes', href: '/meetings/minutes/' },
-    { label: 'Financial Reports', href: '/meetings/financial/' },
-    { label: 'AGM', href: '/meetings/agm/' },
+  { label: 'Meetings', href: url('/meetings/'), children: [
+    { label: 'Overview', href: url('/meetings/') },
+    { label: 'Meeting Minutes', href: url('/meetings/minutes/') },
+    { label: 'Financial Reports', href: url('/meetings/financial/') },
+    { label: 'AGM', href: url('/meetings/agm/') },
   ]},
-  { label: 'Fundraising', href: '/fundraisers/', children: [
-    { label: 'Events & Campaigns', href: '/fundraisers/' },
-    { label: 'Communications', href: '/fundraisers/communications/' },
-    { label: 'Fundraising Summaries', href: '/fundraisers/summaries/' },
-    { label: 'Forms & Docs', href: '/fundraisers/forms/' },
+  { label: 'Fundraising', href: url('/fundraisers/'), children: [
+    { label: 'Events & Campaigns', href: url('/fundraisers/') },
+    { label: 'Communications', href: url('/fundraisers/communications/') },
+    { label: 'Fundraising Summaries', href: url('/fundraisers/summaries/') },
+    { label: 'Forms & Docs', href: url('/fundraisers/forms/') },
   ]},
-  { label: 'Events', href: '/events/', children: [
-    { label: 'Second Hand Uniform', href: '/events/uniform/' },
-    { label: 'Try a Tri', href: '/events/try-a-tri/' },
-    { label: "Santa's Grotto", href: '/events/santas-grotto/' },
-    { label: 'Circus', href: '/events/circus/' },
+  { label: 'Events', href: url('/events/'), children: [
+    { label: 'Second Hand Uniform', href: url('/events/uniform/') },
+    { label: 'Try a Tri', href: url('/events/try-a-tri/') },
+    { label: "Santa's Grotto", href: url('/events/santas-grotto/') },
+    { label: 'Circus', href: url('/events/circus/') },
   ]},
-  { label: 'Pool Club', href: '/pool-club/' },
+  { label: 'Pool Club', href: url('/pool-club/') },
 ];
 
 function isActive(href: string): boolean {
-  if (href === '/') return currentPath === '/';
+  if (href === url('/')) return currentPath === url('/');
   return currentPath.startsWith(href);
 }
 ---
@@ -39,7 +41,7 @@ function isActive(href: string): boolean {
   <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <!-- Logo -->
-      <a href="/" class="flex items-center gap-3 shrink-0">
+      <a href={url('/')} class="flex items-center gap-3 shrink-0">
         <div class="w-10 h-10 bg-primary-600 rounded-xl flex items-center justify-center">
           <span class="text-white font-bold text-lg font-heading">A</span>
         </div>

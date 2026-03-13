@@ -1,13 +1,14 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHeader from '../../components/PageHeader.astro';
+import { url } from '../../utils';
 
 const currentPath = '/pool-club/safety/';
 const subNav = [
-  { label: 'Overview', href: '/pool-club/' },
-  { label: 'FAQs', href: '/pool-club/faqs/' },
-  { label: 'Safety', href: '/pool-club/safety/' },
-  { label: 'Application', href: '/pool-club/application/' },
+  { label: 'Overview', href: url('/pool-club/') },
+  { label: 'FAQs', href: url('/pool-club/faqs/') },
+  { label: 'Safety', href: url('/pool-club/safety/') },
+  { label: 'Application', href: url('/pool-club/application/') },
 ];
 ---
 
@@ -15,7 +16,7 @@ const subNav = [
   <PageHeader
     title="Pool Club Safety & Rules"
     breadcrumbs={[
-      { label: 'Pool Club', href: '/pool-club/' },
+      { label: 'Pool Club', href: url('/pool-club/') },
       { label: 'Safety' },
     ]}
   />

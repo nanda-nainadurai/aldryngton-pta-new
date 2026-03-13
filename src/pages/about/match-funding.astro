@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHeader from '../../components/PageHeader.astro';
 import Card from '../../components/Card.astro';
+import { url } from '../../utils';
 
 const companies = [
   'Argos', 'Asda', 'Barclays Bank', 'Boots', 'British Gas', 'BP', 'BT',
@@ -17,7 +18,7 @@ const companies = [
     title="Match Funding"
     subtitle="Double your fundraising impact through your employer's match funding scheme."
     breadcrumbs={[
-      { label: 'About', href: '/about' },
+      { label: 'About', href: url('/about') },
       { label: 'Match Funding' },
     ]}
   />

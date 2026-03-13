@@ -1,4 +1,6 @@
 ---
+import { url } from '../utils';
+
 interface Props {
   title: string;
   subtitle?: string;
@@ -13,7 +15,7 @@ const { title, subtitle, breadcrumbs } = Astro.props;
     {breadcrumbs && breadcrumbs.length > 0 && (
       <nav class="mb-4">
         <ol class="flex items-center gap-2 text-sm text-primary-200">
-          <li><a href="/" class="hover:text-white transition-colors">Home</a></li>
+          <li><a href={url('/')} class="hover:text-white transition-colors">Home</a></li>
           {breadcrumbs.map((crumb, i) => (
             <li class="flex items-center gap-2">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
