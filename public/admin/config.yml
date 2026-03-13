@@ -2,13 +2,11 @@ backend:
   name: github
   repo: nanda-nainadurai/aldryngton-pta-new
   branch: main
-  auth_endpoint: /api/auth  # For Netlify Identity, or use GitHub OAuth
-
-# When working locally
-local_backend: true
+  base_url: https://remarkable-cascaron-5b59b7.netlify.app
+  auth_endpoint: /api/v1/auth
 
 media_folder: public/uploads
-public_folder: /uploads
+public_folder: /aldryngton-pta-new/uploads
 
 site_url: https://nanda-nainadurai.github.io/aldryngton-pta-new
 
