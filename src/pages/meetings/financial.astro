@@ -4,68 +4,98 @@ import PageHeader from '../../components/PageHeader.astro';
 import { url } from '../../utils';
 
 const recentReports = [
-  { date: '09 Jun 2023', title: "PTA Treasurer\u2019s Report", file: '20230609-pta-treasurers-report' },
-  { date: 'Apr 2023', title: "PTA Treasurer\u2019s Report", file: '20230419-pta-treasurers-report' },
-  { date: 'Feb 2023', title: "PTA Treasurer\u2019s Report", file: '20230224-pta-treasurers-report' },
-  { date: 'Jan 2023', title: "PTA Treasurer\u2019s Report", file: '20230111-pta-treasurers-report' },
+  { date: '09 Jun 2023', title: "PTA Treasurer\u2019s Report", file: '20230609-PTA-Treasurers-Report-%E2%80%93-09-Jun-2023.pdf' },
+  { date: 'Apr 2023', title: "PTA Treasurer\u2019s Report", file: 'PTA-Treasurers-Report-Apr2023.pdf' },
+  { date: 'Feb 2023', title: "PTA Treasurer\u2019s Report", file: 'PTA-Treasurers-Report-Feb-2023.pdf' },
+  { date: 'Jan 2023', title: "PTA Treasurer\u2019s Report", file: 'PTA-Treasurers-Report-%E2%80%93-Jan-2023.pdf' },
 ];
 
-const olderReports: Record<string, { date: string; title: string }[]> = {
+const olderReports: Record<string, { date: string; title: string; file: string }[]> = {
   '2022': [
-    { date: 'May 2022', title: "PTA Treasurer\u2019s Report" },
-    { date: 'Jan 2022', title: "PTA Treasurer\u2019s Report" },
+    { date: 'Nov 2022', title: "PTA Treasurer\u2019s Report", file: 'PTA-Treasurers-Report-%E2%80%93-Nov-2022.pdf' },
+    { date: '28 Apr 2022', title: "PTA Treasurer\u2019s Report", file: 'PTA-Treasurers-Report-28Apr2022.pdf' },
+    { date: 'Mar 2022', title: "PTA Treasurer\u2019s Report", file: 'PTA-Treasurers-Report-Mar2022.pdf' },
+    { date: '12 Jan 2022', title: 'PTA Finance Summary', file: 'PTA-Meeting-12Jan2022-Finance-Summary.pdf' },
   ],
   '2021': [
-    { date: 'May 2021', title: "PTA Treasurer\u2019s Report" },
-    { date: 'Jan 2021', title: "PTA Treasurer\u2019s Report" },
+    { date: 'Nov 2021', title: "PTA Treasurer\u2019s Report", file: 'PTA-Treasurers-Report-%E2%80%93-Nov-2021.pdf' },
+    { date: 'Jun 2021', title: "PTA Treasurer\u2019s Report", file: 'PTA-Treasurers-Report-%E2%80%93-Jun-2021.pdf' },
+    { date: 'May 2021', title: "PTA Treasurer\u2019s Report", file: 'PTA-Treasurers-Report-%E2%80%93-May-2021.pdf' },
+    { date: 'Mar 2021', title: "PTA Treasurer\u2019s Report", file: 'PTA-Treasurers-Report-%E2%80%93-Mar-2021.pdf' },
+    { date: 'Jan 2021', title: "PTA Treasurer\u2019s Report", file: '20210101-PTA-Treasurer-Report-Jan-2021.pdf' },
   ],
   '2020': [
-    { date: 'May 2020', title: "PTA Treasurer\u2019s Report" },
-    { date: 'Jan 2020', title: "PTA Treasurer\u2019s Report" },
+    { date: 'Nov 2020', title: "PTA Treasurer\u2019s Report", file: '20201101-PTA-Treasurers-Report-Nov-2020.pdf' },
+    { date: '22 Jan 2020', title: "Treasurer\u2019s Report", file: '20200122-Treasurers-Report-22.01.20.pdf' },
   ],
   '2019': [
-    { date: 'May 2019', title: "PTA Treasurer\u2019s Report" },
-    { date: 'Jan 2019', title: "PTA Treasurer\u2019s Report" },
+    { date: '04 Jul 2019', title: "Treasurer\u2019s Report", file: '20190704-04.07.19-Treasurers-Report.pdf' },
+    { date: '23 May 2019', title: "Treasurer\u2019s Report", file: '20190523-23.05.19-Treasurers-Report.pdf' },
+    { date: '24 Jan 2019', title: "Treasurer\u2019s Report", file: '20190124-24.01.19-Treasurers-Report.pdf' },
   ],
   '2018': [
-    { date: 'May 2018', title: "PTA Treasurer\u2019s Report" },
-    { date: 'Jan 2018', title: "PTA Treasurer\u2019s Report" },
+    { date: '08 Nov 2018', title: "Treasurer\u2019s Report", file: '20181108-Treasurers-Report-08.11.18.pdf' },
+    { date: '05 Jul 2018', title: "Treasurer\u2019s Report", file: '20180705-Treasurers-Report-05.07.18.pdf' },
+    { date: '21 Mar 2018', title: "Treasurer\u2019s Report", file: '20180321-Treasurers-Report-21.03.18.pdf' },
+    { date: '25 Jan 2018', title: "Treasurer\u2019s Report", file: '20180125-Treasurers-Report-25.01.18.pdf' },
   ],
   '2017': [
-    { date: 'May 2017', title: "PTA Treasurer\u2019s Report" },
-    { date: 'Jan 2017', title: "PTA Treasurer\u2019s Report" },
+    { date: '02 Nov 2017', title: "Treasurer\u2019s Report", file: '20172202-Treasurers-Report-02.11.17.pdf' },
+    { date: '06 Jul 2017', title: "Treasurer\u2019s Report", file: '20170706-Treasurers-Report-06.07.17.pdf' },
+    { date: '16 May 2017', title: "Treasurer\u2019s Report", file: '20170516-Treasurers-Report-16.05.17.pdf' },
+    { date: '23 Mar 2017', title: "Treasurer\u2019s Report", file: '20170323-Treasurers-Report-23.03.17.pdf' },
+    { date: '26 Jan 2017', title: "Treasurer\u2019s Report", file: '20170126-Treasurers-Report-26.01.17.pdf' },
   ],
   '2016': [
-    { date: 'May 2016', title: "PTA Treasurer\u2019s Report" },
-    { date: 'Jan 2016', title: "PTA Treasurer\u2019s Report" },
+    { date: '10 Nov 2016', title: "Treasurer\u2019s Report", file: '20161101-Treasurers-Report-10.11.16.pdf' },
+    { date: '12 Oct 2016', title: "Treasurer\u2019s Report", file: '20161012-Treasurers-Report-12.10.16.pdf' },
+    { date: '22 Jun 2016', title: "Treasurer\u2019s Report", file: '20160622-Treasurers-Report-22.06.16.pdf' },
+    { date: '21 Apr 2016', title: "Treasurer\u2019s Report", file: '20160421-Treasurers-Report-21.04.16.pdf' },
+    { date: '02 Mar 2016', title: "Treasurer\u2019s Report", file: '20160302-Treasurers-Reportv2-02.03.16.pdf' },
+    { date: '19 Jan 2016', title: "Treasurer\u2019s Report", file: '20160119-Treasurers-Reportv2-19.01.16.pdf' },
   ],
   '2015': [
-    { date: 'May 2015', title: "PTA Treasurer\u2019s Report" },
-    { date: 'Jan 2015', title: "PTA Treasurer\u2019s Report" },
+    { date: '18 Nov 2015', title: "Treasurer\u2019s Report", file: '20151118-Treasurers-Report-v2-18.11.15.pdf' },
+    { date: '01 Oct 2015', title: "Treasurer\u2019s Report", file: '20151001-Treasurers-Report-01.10.15.pdf' },
+    { date: '02 Jul 2015', title: "Treasurer\u2019s Report", file: '20150702-Treasurers-Report-02.07.15.pdf' },
+    { date: '07 May 2015', title: "Treasurer\u2019s Report", file: '20150507-Treasurers-Report-07.05.15.pdf' },
+    { date: '26 Mar 2015', title: "Treasurer\u2019s Report", file: '20150326-Treasurers-Report-26.03.15.pdf' },
+    { date: '22 Jan 2015', title: "Treasurer\u2019s Report", file: '20150122-Treasurers-Report-22.01.15.pdf' },
   ],
   '2014': [
-    { date: 'May 2014', title: "PTA Treasurer\u2019s Report" },
-    { date: 'Jan 2014', title: "PTA Treasurer\u2019s Report" },
+    { date: '16 Oct 2014', title: "Treasurer\u2019s Report", file: '20141016-Treasurers-Report-16.10.14.pdf' },
+    { date: '11 Jun 2014', title: "Treasurer\u2019s Report", file: '20140611-Treasurers-Report-11.06.14.pdf' },
+    { date: '25 Feb 2014', title: "Treasurer\u2019s Report", file: '20140225-Treasurers-Report-25.02.14.pdf' },
+    { date: '16 Jan 2014', title: "Treasurer\u2019s Report", file: '20140116-Treasurers-Report-16.01.14.pdf' },
   ],
   '2013': [
-    { date: 'May 2013', title: "PTA Treasurer\u2019s Report" },
-    { date: 'Jan 2013', title: "PTA Treasurer\u2019s Report" },
+    { date: '26 Nov 2013', title: "Treasurer\u2019s Report", file: '20131126-Treasurers-Report-26-11-13.pdf' },
+    { date: '09 Jul 2013', title: "Treasurer\u2019s Report", file: '20130709-Treasurers_Report_-09_07_13.pdf' },
+    { date: '29 Apr 2013', title: "Treasurer\u2019s Report", file: '20130429-Treasurers-Report-29-04-13.pdf' },
+    { date: '14 Mar 2013', title: "Treasurer\u2019s Report", file: '20130314-Treasurers_Report_-14_03_13.pdf' },
+    { date: '21 Jan 2013', title: "Treasurer\u2019s Report", file: '20130121-Treasurers_Report_-21_01_13.pdf' },
   ],
   '2012': [
-    { date: 'May 2012', title: "PTA Treasurer\u2019s Report" },
-    { date: 'Jan 2012', title: "PTA Treasurer\u2019s Report" },
+    { date: '19 Nov 2012', title: "Treasurer\u2019s Report", file: '20121119-Treasurers-Report.pdf' },
+    { date: '31 Aug 2012', title: "Treasurer\u2019s Report", file: '20120831-Treasurers-Report.pdf' },
+    { date: '12 Jun 2012', title: "Treasurer\u2019s Report", file: '20120612-Treasurers-Report.pdf' },
+    { date: '19 Apr 2012', title: "Treasurer\u2019s Report", file: '20120419-Treasurers-Report.pdf' },
+    { date: '17 Jan 2012', title: "Treasurer\u2019s Report", file: '20120117-Treasurers-Report.pdf' },
   ],
   '2011': [
-    { date: 'May 2011', title: "PTA Treasurer\u2019s Report" },
-    { date: 'Jan 2011', title: "PTA Treasurer\u2019s Report" },
+    { date: '28 Sep 2011', title: "Treasurer\u2019s Report", file: '20110928-Treasurers-Report.pdf' },
+    { date: '19 Jul 2011', title: "Treasurer\u2019s Report", file: '20110719-Treasurers-Report.pdf' },
+    { date: '27 Mar 2011', title: "Treasurer\u2019s Report", file: '20110327-Treasurers-Report.pdf' },
+    { date: '14 Jan 2011', title: "Treasurer\u2019s Report", file: '20110114-Treasurers-Report.pdf' },
   ],
   '2010': [
-    { date: 'May 2010', title: "PTA Treasurer\u2019s Report" },
-    { date: 'Jan 2010', title: "PTA Treasurer\u2019s Report" },
+    { date: '02 Nov 2010', title: "Treasurer\u2019s Report", file: '20101102-Treasurers-Report.pdf' },
+    { date: '27 Apr 2010', title: "Treasurer\u2019s Report", file: '20100427-Treasurers-Report.pdf' },
   ],
   '2009': [
-    { date: 'May 2009', title: "PTA Treasurer\u2019s Report" },
-    { date: 'Jan 2009', title: "PTA Treasurer\u2019s Report" },
+    { date: '11 Jun 2009', title: "Treasurer\u2019s Report", file: '20090611-Treasurers-Report.pdf' },
+    { date: '09 Apr 2009', title: "Treasurer\u2019s Report", file: '20090409-Treasurers-Report.pdf' },
+    { date: '27 Jan 2009', title: "Treasurer\u2019s Report", file: '20090127-Treasurers-Report.pdf' },
   ],
 };
 ---
@@ -86,10 +116,10 @@ const olderReports: Record<string, { date: string; title: string }[]> = {
     </p>
 
     <!-- Recent Reports -->
-    <h2 class="text-2xl font-bold text-gray-900 font-heading mb-6">Recent Reports (2023 – 2025)</h2>
+    <h2 class="text-2xl font-bold text-gray-900 font-heading mb-6">Recent Reports (2023)</h2>
     <div class="bg-white rounded-2xl border border-gray-100 shadow-sm divide-y divide-gray-100 mb-10">
       {recentReports.map((item) => (
-        <a href="#" class="flex items-center gap-4 px-5 py-4 hover:bg-primary-50 transition-colors first:rounded-t-2xl last:rounded-b-2xl">
+        <a href={url(`/documents/financial/${item.file}`)} class="flex items-center gap-4 px-5 py-4 hover:bg-primary-50 transition-colors first:rounded-t-2xl last:rounded-b-2xl">
           <div class="flex-shrink-0 text-accent-600">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
@@ -121,7 +151,7 @@ const olderReports: Record<string, { date: string; title: string }[]> = {
             <h3 class="text-sm font-bold text-accent-700 uppercase tracking-wide mb-2">{year}</h3>
             <div class="divide-y divide-gray-100">
               {items.map((item) => (
-                <a href="#" class="flex items-center gap-3 py-2.5 hover:bg-primary-50 px-3 -mx-3 rounded-lg transition-colors">
+                <a href={url(`/documents/financial/${item.file}`)} class="flex items-center gap-3 py-2.5 hover:bg-primary-50 px-3 -mx-3 rounded-lg transition-colors">
                   <div class="flex-shrink-0 text-gray-400">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />

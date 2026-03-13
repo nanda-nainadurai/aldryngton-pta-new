@@ -4,70 +4,58 @@ import PageHeader from '../../components/PageHeader.astro';
 import { url } from '../../utils';
 
 const recentAGMs = [
-  { date: '17 Sep 2025', title: "PTA AGM — Treasurer\u2019s Report", file: '20250917-pta-agm-treasurers-report' },
-  { date: '17 Sep 2025', title: 'PTA AGM — Minutes', file: '20250917-pta-agm-minutes' },
-  { date: '18 Sep 2024', title: 'PTA AGM — Minutes', file: '20240918-pta-agm-minutes' },
-  { date: '01 Nov 2023', title: 'PTA EGM — Minutes', file: '20231101-pta-egm-minutes' },
-  { date: '09 Oct 2023', title: "PTA AGM — Treasurer\u2019s Report", file: '20231009-pta-agm-treasurers-report' },
-  { date: '09 Oct 2023', title: 'PTA AGM — Minutes', file: '20231009-pta-agm-minutes' },
+  { date: '17 Sep 2025', title: "PTA AGM \u2014 Treasurer\u2019s Report", file: '17-Sept-2025-Treasurers-Report-AGM-.docx-1.pdf' },
+  { date: '17 Sep 2025', title: 'PTA AGM \u2014 Minutes', file: 'AGM-17th-Sept-2025-final.pdf' },
+  { date: '18 Sep 2024', title: 'PTA AGM \u2014 Minutes', file: '20240918-PTA-AGM-18Sep2024-Minutes.pdf' },
+  { date: '01 Nov 2023', title: 'PTA EGM \u2014 Minutes', file: 'EGM-Minutes-1st-Nov-23-finalSD.pdf' },
+  { date: '09 Oct 2023', title: "PTA AGM \u2014 Treasurer\u2019s Report", file: '20231009-PTA-AGM-09Oct2023-Treasurers-Report.pdf' },
+  { date: '09 Oct 2023', title: 'PTA AGM \u2014 Minutes', file: '20231009-PTA-AGM-09Oct2023-Minutes-Final-SD-18.10.23.pdf' },
 ];
 
-const olderAGMs: Record<string, { date: string; title: string }[]> = {
+const olderAGMs: Record<string, { date: string; title: string; file: string }[]> = {
   '2022': [
-    { date: '21 Sep 2022', title: "PTA AGM — Treasurer\u2019s Report" },
-    { date: '21 Sep 2022', title: 'PTA AGM — Minutes' },
+    { date: '05 Oct 2022', title: 'PTA AGM \u2014 Agenda', file: 'PTA-AGM-5.10.22-Agenda-SD-final.pdf' },
+    { date: '05 Oct 2022', title: 'PTA AGM \u2014 Minutes', file: 'PTA-AGM-05-Oct-2022-MInutes-SD-Final-19.10.22.pdf' },
   ],
   '2021': [
-    { date: '22 Sep 2021', title: "PTA AGM — Treasurer\u2019s Report" },
-    { date: '22 Sep 2021', title: 'PTA AGM — Minutes' },
+    { date: '20 Oct 2021', title: 'PTA EGM \u2014 Minutes', file: 'PTA-EGM-20Oct2021-Minutes.pdf' },
+    { date: '07 Oct 2021', title: 'PTA AGM \u2014 Minutes', file: 'PTA-AGM-07Oct2021-Minutes.pdf' },
   ],
   '2020': [
-    { date: '23 Sep 2020', title: "PTA AGM — Treasurer\u2019s Report" },
-    { date: '23 Sep 2020', title: 'PTA AGM — Minutes' },
+    { date: '06 Oct 2020', title: 'PTA AGM \u2014 Minutes', file: '20201006-6.10.20-AGM-Minutes-1.pdf' },
   ],
   '2019': [
-    { date: '18 Sep 2019', title: "PTA AGM — Treasurer\u2019s Report" },
-    { date: '18 Sep 2019', title: 'PTA AGM — Minutes' },
+    { date: '03 Oct 2019', title: 'PTA AGM \u2014 Minutes', file: '20191003-3.10.19-AGM-Minutes.pdf' },
   ],
   '2018': [
-    { date: '19 Sep 2018', title: "PTA AGM — Treasurer\u2019s Report" },
-    { date: '19 Sep 2018', title: 'PTA AGM — Minutes' },
+    { date: '04 Oct 2018', title: 'PTA AGM \u2014 Minutes', file: '20181004-4.10.18-AGM-Minutes.pdf' },
   ],
   '2017': [
-    { date: '20 Sep 2017', title: "PTA AGM — Treasurer\u2019s Report" },
-    { date: '20 Sep 2017', title: 'PTA AGM — Minutes' },
+    { date: 'Oct 2017', title: 'PTA AGM \u2014 Minutes', file: '20171001-AGM-October-2017-Minutes.pdf' },
   ],
   '2016': [
-    { date: '21 Sep 2016', title: "PTA AGM — Treasurer\u2019s Report" },
-    { date: '21 Sep 2016', title: 'PTA AGM — Minutes' },
+    { date: 'Sep 2016', title: 'PTA AGM \u2014 Minutes', file: '20161001-AGM-September-2016-Minutes.pdf' },
   ],
   '2015': [
-    { date: '16 Sep 2015', title: "PTA AGM — Treasurer\u2019s Report" },
-    { date: '16 Sep 2015', title: 'PTA AGM — Minutes' },
+    { date: 'Sep 2015', title: 'PTA AGM \u2014 Minutes', file: '20151001-AGM-September-2015-Minutes.pdf' },
   ],
   '2014': [
-    { date: '17 Sep 2014', title: "PTA AGM — Treasurer\u2019s Report" },
-    { date: '17 Sep 2014', title: 'PTA AGM — Minutes' },
+    { date: 'Sep 2014', title: 'PTA AGM \u2014 Minutes', file: '20141001-AGM-September-2014-Minutes.pdf' },
   ],
   '2013': [
-    { date: '18 Sep 2013', title: "PTA AGM — Treasurer\u2019s Report" },
-    { date: '18 Sep 2013', title: 'PTA AGM — Minutes' },
+    { date: 'Sep 2013', title: 'PTA AGM \u2014 Minutes', file: '20130901-AGM-September-2013-Minutes.pdf' },
   ],
   '2012': [
-    { date: '19 Sep 2012', title: "PTA AGM — Treasurer\u2019s Report" },
-    { date: '19 Sep 2012', title: 'PTA AGM — Minutes' },
-  ],
-  '2011': [
-    { date: '14 Sep 2011', title: "PTA AGM — Treasurer\u2019s Report" },
-    { date: '14 Sep 2011', title: 'PTA AGM — Minutes' },
+    { date: 'Sep 2012', title: 'PTA AGM \u2014 Minutes', file: '20120901-AGM-September-2012-Minutes.pdf' },
   ],
   '2010': [
-    { date: '15 Sep 2010', title: "PTA AGM — Treasurer\u2019s Report" },
-    { date: '15 Sep 2010', title: 'PTA AGM — Minutes' },
+    { date: 'Sep 2010', title: 'PTA AGM \u2014 Minutes', file: '20100901-AGM-September-2010-Minutes.pdf' },
   ],
   '2009': [
-    { date: '16 Sep 2009', title: "PTA AGM — Treasurer\u2019s Report" },
-    { date: '16 Sep 2009', title: 'PTA AGM — Minutes' },
+    { date: '25 Sep 2009', title: 'PTA AGM \u2014 Minutes', file: '20090925-PTA-AGM.pdf' },
+  ],
+  '2008': [
+    { date: 'Oct 2008', title: 'PTA AGM \u2014 Minutes', file: '20081001-AGM-October-2008-Minutes.pdf' },
   ],
 };
 ---
@@ -92,7 +80,7 @@ const olderAGMs: Record<string, { date: string; title: string }[]> = {
     <h2 class="text-2xl font-bold text-gray-900 font-heading mb-6">Recent AGMs (2023 – 2025)</h2>
     <div class="bg-white rounded-2xl border border-gray-100 shadow-sm divide-y divide-gray-100 mb-10">
       {recentAGMs.map((item) => (
-        <a href="#" class="flex items-center gap-4 px-5 py-4 hover:bg-primary-50 transition-colors first:rounded-t-2xl last:rounded-b-2xl">
+        <a href={url(`/documents/agm/${item.file}`)} class="flex items-center gap-4 px-5 py-4 hover:bg-primary-50 transition-colors first:rounded-t-2xl last:rounded-b-2xl">
           <div class="flex-shrink-0 text-warm-500">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
@@ -113,7 +101,7 @@ const olderAGMs: Record<string, { date: string; title: string }[]> = {
     <!-- Older AGMs -->
     <details class="group bg-white rounded-2xl border border-gray-100 shadow-sm">
       <summary class="flex items-center justify-between cursor-pointer px-5 py-4 text-lg font-bold text-gray-900 font-heading hover:bg-gray-50 rounded-2xl transition-colors">
-        <span>Older AGMs (2009 – 2022)</span>
+        <span>Older AGMs (2008 – 2022)</span>
         <svg class="w-5 h-5 text-gray-400 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
         </svg>
@@ -124,7 +112,7 @@ const olderAGMs: Record<string, { date: string; title: string }[]> = {
             <h3 class="text-sm font-bold text-warm-600 uppercase tracking-wide mb-2">{year}</h3>
             <div class="divide-y divide-gray-100">
               {items.map((item) => (
-                <a href="#" class="flex items-center gap-3 py-2.5 hover:bg-primary-50 px-3 -mx-3 rounded-lg transition-colors">
+                <a href={url(`/documents/agm/${item.file}`)} class="flex items-center gap-3 py-2.5 hover:bg-primary-50 px-3 -mx-3 rounded-lg transition-colors">
                   <div class="flex-shrink-0 text-gray-400">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />

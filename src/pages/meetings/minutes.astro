@@ -4,76 +4,117 @@ import PageHeader from '../../components/PageHeader.astro';
 import { url } from '../../utils';
 
 const recentMinutes = [
-  { date: '12 Nov 2025', title: 'PTA Meeting', file: '20251112-pta-meeting' },
-  { date: '07 May 2025', title: 'PTA Meeting', file: '20250507-pta-meeting' },
-  { date: '22 Jan 2025', title: 'PTA Meeting', file: '20250122-pta-meeting' },
-  { date: '01 May 2024', title: 'PTA Meeting', file: '20240501-pta-meeting' },
-  { date: '10 Jan 2024', title: 'PTA Meeting', file: '20240110-pta-meeting' },
-  { date: '09 Jun 2023', title: 'PTA Meeting', file: '20230609-pta-meeting' },
-  { date: '24 Feb 2023', title: 'PTA Meeting', file: '20230224-pta-meeting' },
-  { date: '11 Jan 2023', title: 'PTA Meeting', file: '20230111-pta-meeting' },
+  { date: '12 Nov 2025', title: 'PTA Meeting', file: 'PTA-12th-Nov-2025-FINAL.pdf' },
+  { date: '07 May 2025', title: 'PTA Meeting', file: '20250507-PTA-Meeting-Minutes.pdf' },
+  { date: '22 Jan 2025', title: 'PTA Meeting', file: 'PTA-meeting-22.01.25-Final-SD.pdf' },
+  { date: '01 May 2024', title: 'PTA Meeting', file: 'PTA-minutes-1st-May-2024-Final-SD-docx.pdf' },
+  { date: '10 Jan 2024', title: 'PTA Meeting', file: 'Committee-Minutes-10.01.24-Final-SD.pdf' },
+  { date: '09 Jun 2023', title: 'PTA Meeting', file: '20230609-PTA-Meeting-09-Jun-2023-Minutes.pdf' },
+  { date: '24 Feb 2023', title: 'PTA Meeting', file: '20230224-PTA-Meeting-24-Feb-2023-Minutes.pdf' },
+  { date: '11 Jan 2023', title: 'PTA Meeting', file: '20230111-PTA-Meeting-11-Jan-2023-%E2%80%93-Minutes.pdf' },
 ];
 
-const olderMinutes: Record<string, { date: string; title: string }[]> = {
+const olderMinutes: Record<string, { date: string; title: string; file: string }[]> = {
   '2022': [
-    { date: '25 May 2022', title: 'PTA Meeting' },
-    { date: '26 Jan 2022', title: 'PTA Meeting' },
+    { date: '04 Nov 2022', title: 'PTA Meeting', file: 'PTA-Minutes-04Nov22-SD-final.pdf' },
+    { date: '01 Jul 2022', title: 'PTA Meeting', file: 'PTA-Meeting-01Jul2022-Minutes.pdf' },
+    { date: '28 Apr 2022', title: 'PTA Committee Meeting', file: 'PTA-Committee-Minutes-28Apr2022.pdf' },
+    { date: '02 Mar 2022', title: 'PTA Meeting', file: 'PTA-Meeting-02-Mar-2022-Minutes.pdf' },
+    { date: '12 Jan 2022', title: 'PTA Meeting', file: 'PTA-Meeting-Minutes-12Jan2022.pdf' },
   ],
   '2021': [
-    { date: '19 May 2021', title: 'PTA Meeting' },
-    { date: '20 Jan 2021', title: 'PTA Meeting' },
+    { date: '02 Nov 2021', title: 'PTA Meeting', file: '20211102-PTA-Meeting-02-Nov-2021-Minutes.pdf' },
+    { date: '16 Jun 2021', title: 'PTA Committee Meeting', file: 'PTA-Committee-Meeting-16-Jun-2021.pdf' },
+    { date: 'May 2021', title: 'PTA Committee Meeting', file: '20210501-PTA-Committee-Meeting-May-2021-Minutes.pdf' },
+    { date: '02 Mar 2021', title: 'PTA Meeting', file: '20210302-PTA-Minutes-2-March-2021.pdf' },
+    { date: 'Jan 2021', title: 'PTA Committee Meeting', file: '20210101-PTA-Committee-Meeting-Jan-2021-Minutes.pdf' },
   ],
   '2020': [
-    { date: '27 May 2020', title: 'PTA Meeting' },
-    { date: '22 Jan 2020', title: 'PTA Meeting' },
+    { date: 'Nov 2020', title: 'PTA Meeting', file: '20201101-PTA-Meeting-Nov-2020-Minutes.pdf' },
+    { date: '22 Jan 2020', title: 'PTA Meeting', file: '20200122-22.01.20-PTA-Meeting-Minutes.pdf' },
   ],
   '2019': [
-    { date: '15 May 2019', title: 'PTA Meeting' },
-    { date: '23 Jan 2019', title: 'PTA Meeting' },
+    { date: '12 Nov 2019', title: 'PTA Meeting', file: '20191112-12.11.19-PTA-Meeting-Minutes.pdf' },
+    { date: '04 Jul 2019', title: 'PTA Committee Meeting', file: '20190704-04.07.19-PTA-Committee-Meeting-Minutes.pdf' },
+    { date: '23 May 2019', title: 'PTA Meeting', file: '20190523-23.05.19-PTA-Meeting-Minutes.pdf' },
+    { date: '28 Mar 2019', title: 'PTA Meeting', file: '20190328-28.03.19-PTA-Meeting-Minutes.pdf' },
+    { date: '24 Jan 2019', title: 'PTA Meeting', file: '20190124-24.01.19-PTA-Meeting-Minutes.pdf' },
   ],
   '2018': [
-    { date: '09 May 2018', title: 'PTA Meeting' },
-    { date: '17 Jan 2018', title: 'PTA Meeting' },
+    { date: '08 Nov 2018', title: 'PTA Meeting', file: '20181108-08.11.18-PTA-Meeting-Minutes.pdf' },
+    { date: '05 Jul 2018', title: 'PTA Meeting', file: '20180705-05.07.18-PTA-Meeting-Minutes.pdf' },
+    { date: '10 May 2018', title: 'PTA Meeting', file: '20180510-10.5.18-PTA-Meeting-Minutes-1.pdf' },
+    { date: '22 Mar 2018', title: 'PTA Meeting', file: '20180322-22.03.18-PTA-Meeting-Minutes.pdf' },
+    { date: '25 Jan 2018', title: 'PTA Meeting', file: '20180125-25.01.18-PTA-Meeting-Minutes.pdf' },
   ],
   '2017': [
-    { date: '10 May 2017', title: 'PTA Meeting' },
-    { date: '18 Jan 2017', title: 'PTA Meeting' },
+    { date: '02 Nov 2017', title: 'PTA Meeting', file: '20171102-02.11.17-PTA-Meeting-Minutes.pdf' },
+    { date: '06 Jul 2017', title: 'PTA Meeting', file: '20170706-06.07.17-PTA-Meeting-Minutes.pdf' },
+    { date: '18 May 2017', title: 'PTA Meeting', file: '20170518-18.05.17-PTA-Meeting-Minutes.pdf' },
+    { date: '23 Mar 2017', title: 'PTA Meeting', file: '20170323-PTA-Meeting-Minutes-23.03.17.pdf' },
+    { date: '26 Jan 2017', title: 'PTA Meeting', file: '20170126-26.01.17-PTA-Meeting-Minutes.pdf' },
   ],
   '2016': [
-    { date: '11 May 2016', title: 'PTA Meeting' },
-    { date: '20 Jan 2016', title: 'PTA Meeting' },
+    { date: '10 Nov 2016', title: 'PTA Meeting', file: '20161110-10.11.16-PTA-Minutes.pdf' },
+    { date: '12 Oct 2016', title: 'PTA Meeting', file: '20161012-12.10.16-PTA-Minutes.pdf' },
+    { date: '22 Jun 2016', title: 'PTA Meeting', file: '20160622-22.06.16-PTA-Minutes.pdf' },
+    { date: '21 Apr 2016', title: 'PTA Meeting', file: '20160421-21.04.16-PTA-Minutes.pdf' },
+    { date: '02 Mar 2016', title: 'PTA Meeting', file: '20160302-02.03.16-PTA-Minutes.pdf' },
+    { date: '21 Jan 2016', title: 'PTA Meeting', file: '20160121-21.01.16-PTA-Minutes.pdf' },
   ],
   '2015': [
-    { date: '13 May 2015', title: 'PTA Meeting' },
-    { date: '21 Jan 2015', title: 'PTA Meeting' },
+    { date: '18 Nov 2015', title: 'PTA Meeting', file: '20151118-18.11.15-PTA-Minutes.pdf' },
+    { date: '01 Oct 2015', title: 'PTA Meeting', file: '20151001-01.10.15-PTA-Minutes.pdf' },
+    { date: '02 Jul 2015', title: 'PTA Meeting', file: '20150702-02.07.15-PTA-Minutes.pdf' },
+    { date: '07 May 2015', title: 'PTA Meeting', file: '20150507-07.05.15-PTA-Minutes.pdf' },
+    { date: '22 Jan 2015', title: 'PTA Meeting', file: '20150122-22.01.15-PTA-Minutes.pdf' },
   ],
   '2014': [
-    { date: '14 May 2014', title: 'PTA Meeting' },
-    { date: '22 Jan 2014', title: 'PTA Meeting' },
+    { date: '27 Nov 2014', title: 'PTA Meeting', file: '20141127-27.11.14-PTA-Minutes.pdf' },
+    { date: '16 Oct 2014', title: 'PTA Meeting', file: '20141016-16.10.14-PTA-Minutes.pdf' },
+    { date: '10 Jul 2014', title: 'PTA Meeting', file: '20140710-10.07.14-PTA-Minutes.pdf' },
+    { date: '12 Jun 2014', title: 'PTA Meeting', file: '20140612-12.06.14-PTA-Minutes.pdf' },
+    { date: '24 Apr 2014', title: 'PTA Meeting', file: '20140424-24.04.14-PTA-Minutes.pdf' },
+    { date: '27 Feb 2014', title: 'PTA Meeting', file: '20140227-27.02.14-PTA-Minutes.pdf' },
+    { date: '16 Jan 2014', title: 'PTA Meeting', file: '20140116-16.01.14-PTA-Minutes.pdf' },
   ],
   '2013': [
-    { date: '15 May 2013', title: 'PTA Meeting' },
-    { date: '23 Jan 2013', title: 'PTA Meeting' },
+    { date: '17 Oct 2013', title: 'PTA Meeting', file: '20131017-17.10.13-PTA-Minutes.pdf' },
+    { date: '14 Mar 2013', title: 'PTA Meeting', file: '20130314-14.03.13-PTA-Minutes.pdf' },
+    { date: '24 Jan 2013', title: 'PTA Meeting', file: '20130124-24.01.13-PTA-Minutes.pdf' },
   ],
   '2012': [
-    { date: '09 May 2012', title: 'PTA Meeting' },
-    { date: '18 Jan 2012', title: 'PTA Meeting' },
+    { date: '22 Nov 2012', title: 'PTA Meeting', file: '20121122-22.11.12-PTA-Minutes.pdf' },
+    { date: '02 Nov 2012', title: 'PTA Meeting', file: '20121102-02.11.12-PTA-Minutes.pdf' },
+    { date: '04 Oct 2012', title: 'PTA Meeting', file: '20121004-04.10.12-PTA-Minutes.pdf' },
+    { date: '20 Jun 2012', title: 'PTA Meeting', file: '20120620-20.06.12-PTA-Minutes.pdf' },
+    { date: '18 Jan 2012', title: 'PTA Meeting', file: '20120118-18.01.12-PTA-Minutes.pdf' },
   ],
   '2011': [
-    { date: '11 May 2011', title: 'PTA Meeting' },
-    { date: '19 Jan 2011', title: 'PTA Meeting' },
+    { date: '28 Sep 2011', title: 'PTA Meeting', file: '20110928-28.09.11-PTA-Minutes.pdf' },
+    { date: '26 May 2011', title: 'PTA Meeting', file: '20110526-26.05.11-PTA-Minutes.pdf' },
+    { date: '04 May 2011', title: 'PTA Meeting', file: '20110504-04.05.11-PTA-Minutes.pdf' },
+    { date: '30 Mar 2011', title: 'PTA Meeting', file: '20110330-30.03.11-PTA-Minutes.pdf' },
+    { date: '01 Mar 2011', title: 'PTA Meeting', file: '20110301-01.03.11-PTA-Minutes.pdf' },
+    { date: '18 Jan 2011', title: 'PTA Meeting', file: '20110118-18.01.11-PTA-Minutes.pdf' },
   ],
   '2010': [
-    { date: '12 May 2010', title: 'PTA Meeting' },
-    { date: '20 Jan 2010', title: 'PTA Meeting' },
+    { date: '03 Nov 2010', title: 'PTA Meeting', file: '20101103-03.11.10-PTA-Minutes.pdf' },
+    { date: '15 Sep 2010', title: 'PTA Meeting', file: '20100915-15.09.10-PTA-Minutes.pdf' },
+    { date: '26 May 2010', title: 'PTA Meeting', file: '20100526-26.05.10-PTA-Minutes.pdf' },
+    { date: '27 Apr 2010', title: 'PTA Meeting', file: '20100427-27.04.10-PTA-Minutes.pdf' },
+    { date: '26 Jan 2010', title: 'PTA Meeting', file: '20100126-26.01.10-PTA-Minutes.pdf' },
   ],
   '2009': [
-    { date: '13 May 2009', title: 'PTA Meeting' },
-    { date: '21 Jan 2009', title: 'PTA Meeting' },
+    { date: '11 Nov 2009', title: 'PTA Meeting', file: '20091111-11.11.09-PTA-Minutes.pdf' },
+    { date: '05 Oct 2009', title: 'PTA Meeting', file: '20091005-05.10.09-PTA-Minutes.pdf' },
+    { date: '30 Apr 2009', title: 'PTA Meeting (revised)', file: '20090430-30.04.09-PTA-Minutes-revised-13.05.09.pdf' },
+    { date: '27 Jan 2009', title: 'PTA Meeting', file: '20090127-27.01.09-PTA-Minutes.pdf' },
   ],
   '2008': [
-    { date: '14 May 2008', title: 'PTA Meeting' },
-    { date: '16 Jan 2008', title: 'PTA Meeting' },
+    { date: '18 Nov 2008', title: 'PTA Meeting', file: '20081118-18.11.08-PTA-Minutes.pdf' },
+    { date: '21 Oct 2008', title: 'PTA Meeting', file: '20081021-21.10.08-PTA-Minutes.pdf' },
+    { date: '16 Sep 2008', title: 'PTA Meeting', file: '20080916-16.09.08-PTA-Minutes.pdf' },
   ],
 };
 ---
@@ -92,7 +133,7 @@ const olderMinutes: Record<string, { date: string; title: string }[]> = {
     <h2 class="text-2xl font-bold text-gray-900 font-heading mb-6">Recent Minutes (2023 – 2025)</h2>
     <div class="bg-white rounded-2xl border border-gray-100 shadow-sm divide-y divide-gray-100 mb-10">
       {recentMinutes.map((item) => (
-        <a href="#" class="flex items-center gap-4 px-5 py-4 hover:bg-primary-50 transition-colors first:rounded-t-2xl last:rounded-b-2xl">
+        <a href={url(`/documents/minutes/${item.file}`)} class="flex items-center gap-4 px-5 py-4 hover:bg-primary-50 transition-colors first:rounded-t-2xl last:rounded-b-2xl">
           <div class="flex-shrink-0 text-primary-600">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
@@ -124,7 +165,7 @@ const olderMinutes: Record<string, { date: string; title: string }[]> = {
             <h3 class="text-sm font-bold text-primary-700 uppercase tracking-wide mb-2">{year}</h3>
             <div class="divide-y divide-gray-100">
               {items.map((item) => (
-                <a href="#" class="flex items-center gap-3 py-2.5 hover:bg-primary-50 px-3 -mx-3 rounded-lg transition-colors">
+                <a href={url(`/documents/minutes/${item.file}`)} class="flex items-center gap-3 py-2.5 hover:bg-primary-50 px-3 -mx-3 rounded-lg transition-colors">
                   <div class="flex-shrink-0 text-gray-400">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
