@@ -1,0 +1,342 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Home">
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden bg-gradient-to-br from-primary-700 via-primary-600 to-accent-500">
+    <div class="absolute inset-0 opacity-10">
+      <svg class="w-full h-full" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="200" cy="100" r="200" fill="white" />
+        <circle cx="700" cy="400" r="250" fill="white" />
+        <circle cx="400" cy="500" r="150" fill="white" />
+      </svg>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 lg:py-32 text-center">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white font-heading leading-tight">
+        Welcome to<br />
+        <span class="text-warm-300">Aldryngton PTA</span>
+      </h1>
+      <p class="mt-6 text-lg md:text-xl text-primary-100 max-w-2xl mx-auto leading-relaxed">
+        Supporting our school community through fundraising, events, and volunteering.
+        Together we make Aldryngton Primary an even better place for our children.
+      </p>
+      <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a
+          href="#get-involved"
+          class="inline-flex items-center gap-2 px-8 py-4 bg-warm-400 text-gray-900 font-bold rounded-xl text-lg shadow-lg hover:bg-warm-300 hover:shadow-xl transition-all duration-200 font-heading"
+        >
+          Get Involved
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+        <a
+          href="/events/"
+          class="inline-flex items-center gap-2 px-8 py-4 bg-white/15 text-white font-bold rounded-xl text-lg backdrop-blur-sm border border-white/25 hover:bg-white/25 transition-all duration-200 font-heading"
+        >
+          Upcoming Events
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- What We Do Section -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 md:mb-16">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 font-heading">What We Do</h2>
+        <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+          The PTA brings parents, teachers, and the community together to support our children's education and school experience.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        <!-- Fundraising -->
+        <div class="group bg-gradient-to-br from-primary-50 to-white rounded-2xl border border-primary-100 p-6 md:p-8 text-center hover:shadow-lg hover:border-primary-200 transition-all duration-200">
+          <div class="w-16 h-16 mx-auto mb-5 bg-primary-100 text-primary-600 rounded-2xl flex items-center justify-center group-hover:bg-primary-600 group-hover:text-white transition-colors duration-200">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 font-heading mb-2">Fundraising</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Organising events and campaigns to raise funds that directly benefit every child at Aldryngton.
+          </p>
+        </div>
+
+        <!-- Community Events -->
+        <div class="group bg-gradient-to-br from-accent-50 to-white rounded-2xl border border-accent-100 p-6 md:p-8 text-center hover:shadow-lg hover:border-accent-200 transition-all duration-200">
+          <div class="w-16 h-16 mx-auto mb-5 bg-accent-100 text-accent-600 rounded-2xl flex items-center justify-center group-hover:bg-accent-600 group-hover:text-white transition-colors duration-200">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 font-heading mb-2">Community Events</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            From Try a Tri to Santa's Grotto, we bring families together with fun events throughout the year.
+          </p>
+        </div>
+
+        <!-- School Support -->
+        <div class="group bg-gradient-to-br from-warm-50 to-white rounded-2xl border border-warm-100 p-6 md:p-8 text-center hover:shadow-lg hover:border-warm-200 transition-all duration-200">
+          <div class="w-16 h-16 mx-auto mb-5 bg-warm-100 text-warm-500 rounded-2xl flex items-center justify-center group-hover:bg-warm-500 group-hover:text-white transition-colors duration-200">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 00-.491 6.347A48.62 48.62 0 0112 20.904a48.62 48.62 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.636 50.636 0 00-2.658-.813A59.906 59.906 0 0112 3.493a59.903 59.903 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 font-heading mb-2">School Support</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Funding equipment, resources, and experiences that enrich every child's time at school.
+          </p>
+        </div>
+
+        <!-- Volunteering -->
+        <div class="group bg-gradient-to-br from-primary-50 to-white rounded-2xl border border-primary-100 p-6 md:p-8 text-center hover:shadow-lg hover:border-primary-200 transition-all duration-200">
+          <div class="w-16 h-16 mx-auto mb-5 bg-primary-100 text-primary-600 rounded-2xl flex items-center justify-center group-hover:bg-primary-600 group-hover:text-white transition-colors duration-200">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 font-heading mb-2">Volunteering</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Every bit of help matters. From baking cakes to running stalls, there are many ways to contribute.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Links Section -->
+  <section class="py-16 md:py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 md:mb-16">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 font-heading">Quick Links</h2>
+        <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+          Jump straight to the information you need.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Pool Club -->
+        <a href="/pool-club/" class="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg hover:border-primary-200 transition-all duration-200 p-6 block">
+          <div class="w-12 h-12 mb-4 bg-accent-100 text-accent-600 rounded-xl flex items-center justify-center group-hover:bg-accent-600 group-hover:text-white transition-colors duration-200">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16.875 13.5a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25zm0 0v3.375m0-3.375h3.375" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 font-heading mb-1 group-hover:text-primary-700 transition-colors">Pool Club</h3>
+          <p class="text-sm text-gray-500">Swimming sessions, memberships, and pool information.</p>
+          <span class="inline-flex items-center gap-1 mt-3 text-sm font-semibold text-primary-600 group-hover:text-primary-700">
+            Learn more
+            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </span>
+        </a>
+
+        <!-- Upcoming Events -->
+        <a href="/events/" class="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg hover:border-primary-200 transition-all duration-200 p-6 block">
+          <div class="w-12 h-12 mb-4 bg-primary-100 text-primary-600 rounded-xl flex items-center justify-center group-hover:bg-primary-600 group-hover:text-white transition-colors duration-200">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 font-heading mb-1 group-hover:text-primary-700 transition-colors">Upcoming Events</h3>
+          <p class="text-sm text-gray-500">See what's coming up and how to get involved.</p>
+          <span class="inline-flex items-center gap-1 mt-3 text-sm font-semibold text-primary-600 group-hover:text-primary-700">
+            View events
+            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </span>
+        </a>
+
+        <!-- Second Hand Uniform -->
+        <a href="/events/uniform/" class="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg hover:border-primary-200 transition-all duration-200 p-6 block">
+          <div class="w-12 h-12 mb-4 bg-warm-100 text-warm-500 rounded-xl flex items-center justify-center group-hover:bg-warm-500 group-hover:text-white transition-colors duration-200">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 font-heading mb-1 group-hover:text-primary-700 transition-colors">Second Hand Uniform</h3>
+          <p class="text-sm text-gray-500">Affordable pre-loved uniform for all year groups.</p>
+          <span class="inline-flex items-center gap-1 mt-3 text-sm font-semibold text-primary-600 group-hover:text-primary-700">
+            Find out more
+            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </span>
+        </a>
+
+        <!-- Try a Tri -->
+        <a href="/events/try-a-tri/" class="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg hover:border-primary-200 transition-all duration-200 p-6 block">
+          <div class="w-12 h-12 mb-4 bg-primary-100 text-primary-600 rounded-xl flex items-center justify-center group-hover:bg-primary-600 group-hover:text-white transition-colors duration-200">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 01-.982-3.172M9.497 14.25a7.454 7.454 0 00.981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 007.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M18.75 4.236c.982.143 1.954.317 2.916.52A6.003 6.003 0 0016.27 9.728M18.75 4.236V4.5c0 2.108-.966 3.99-2.48 5.228m0 0a6.003 6.003 0 01-2.77.672 6.004 6.004 0 01-2.77-.672" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 font-heading mb-1 group-hover:text-primary-700 transition-colors">Try a Tri</h3>
+          <p class="text-sm text-gray-500">Our popular children's triathlon event for all abilities.</p>
+          <span class="inline-flex items-center gap-1 mt-3 text-sm font-semibold text-primary-600 group-hover:text-primary-700">
+            Learn more
+            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Save Our Pool Campaign -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="relative rounded-3xl overflow-hidden bg-gradient-to-r from-accent-600 to-accent-700 shadow-xl">
+        <div class="absolute inset-0 opacity-10">
+          <svg class="w-full h-full" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 200 Q 100 150 200 200 T 400 200 T 600 200 T 800 200 V 400 H 0 Z" fill="white" />
+            <path d="M0 250 Q 100 200 200 250 T 400 250 T 600 250 T 800 250 V 400 H 0 Z" fill="white" opacity="0.5" />
+          </svg>
+        </div>
+        <div class="relative p-8 md:p-12 lg:p-16 flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+          <div class="flex-1 text-center lg:text-left">
+            <span class="inline-block px-4 py-1.5 bg-white/20 text-white text-sm font-semibold rounded-full mb-4 backdrop-blur-sm">
+              Campaign Highlight
+            </span>
+            <h2 class="text-3xl md:text-4xl font-extrabold text-white font-heading mb-4">
+              Save Our Pool
+            </h2>
+            <p class="text-accent-100 text-lg leading-relaxed max-w-xl">
+              Our school pool is a treasured community resource. Help us raise the funds needed to keep it open
+              for our children and the wider community. Every contribution makes a difference.
+            </p>
+            <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <a
+                href="https://www.crowdfunder.co.uk/p/save-aldryngton-pool"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-warm-400 text-gray-900 font-bold rounded-xl text-lg shadow-lg hover:bg-warm-300 hover:shadow-xl transition-all duration-200 font-heading"
+              >
+                Donate on Crowdfunder
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                </svg>
+              </a>
+              <a
+                href="/pool-club/"
+                class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/15 text-white font-bold rounded-xl text-lg backdrop-blur-sm border border-white/25 hover:bg-white/25 transition-all duration-200 font-heading"
+              >
+                About the Pool
+              </a>
+            </div>
+          </div>
+          <div class="shrink-0">
+            <div class="w-40 h-40 md:w-48 md:h-48 bg-white/15 rounded-3xl flex items-center justify-center backdrop-blur-sm border border-white/20">
+              <svg class="w-20 h-20 md:w-24 md:h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Get Involved Section -->
+  <section id="get-involved" class="py-16 md:py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 md:mb-16">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 font-heading">Get Involved</h2>
+        <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+          As a parent or carer at Aldryngton Primary, you are automatically a member of the PTA.
+          We really need your support!
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <!-- Attend Events -->
+        <div class="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 md:p-8 hover:shadow-md transition-shadow duration-200">
+          <div class="w-12 h-12 mb-4 bg-primary-100 text-primary-600 rounded-xl flex items-center justify-center">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 font-heading mb-2">Attend Events</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Come along to PTA meetings and events. Your presence and ideas are always welcome, even if you can only make it occasionally.
+          </p>
+        </div>
+
+        <!-- Volunteer Your Time -->
+        <div class="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 md:p-8 hover:shadow-md transition-shadow duration-200">
+          <div class="w-12 h-12 mb-4 bg-warm-100 text-warm-500 rounded-xl flex items-center justify-center">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 font-heading mb-2">Volunteer Your Time</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Help out at events, run a stall, bake for a cake sale, or lend a hand with setup. Even an hour of your time makes a real difference.
+          </p>
+        </div>
+
+        <!-- Share Your Skills -->
+        <div class="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 md:p-8 hover:shadow-md transition-shadow duration-200">
+          <div class="w-12 h-12 mb-4 bg-accent-100 text-accent-600 rounded-xl flex items-center justify-center">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 font-heading mb-2">Share Your Skills</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Whether it's design, organisation, first aid, or anything else, your professional skills can help the PTA achieve more.
+          </p>
+        </div>
+
+        <!-- Match Funding -->
+        <div class="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 md:p-8 hover:shadow-md transition-shadow duration-200">
+          <div class="w-12 h-12 mb-4 bg-primary-100 text-primary-600 rounded-xl flex items-center justify-center">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 font-heading mb-2">Match Funding</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Many employers will match your fundraising efforts. Check if your company offers a match funding scheme to double your impact.
+          </p>
+        </div>
+
+        <!-- Spread the Word -->
+        <div class="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 md:p-8 hover:shadow-md transition-shadow duration-200">
+          <div class="w-12 h-12 mb-4 bg-warm-100 text-warm-500 rounded-xl flex items-center justify-center">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10.34 15.84c-.688-.06-1.386-.09-2.09-.09H7.5a4.5 4.5 0 110-9h.75c.704 0 1.402-.03 2.09-.09m0 9.18c.253.962.584 1.892.985 2.783.247.55.06 1.21-.463 1.511l-.657.38c-.551.318-1.26.117-1.527-.461a20.845 20.845 0 01-1.44-4.282m3.102.069a18.03 18.03 0 01-.59-4.59c0-1.586.205-3.124.59-4.59m0 9.18a23.848 23.848 0 018.835 2.535M10.34 6.66a23.847 23.847 0 008.835-2.535m0 0A23.74 23.74 0 0018.795 3m.38 1.125a23.91 23.91 0 011.014 5.395m-1.014 8.855c-.118.38-.245.754-.38 1.125m.38-1.125a23.91 23.91 0 001.014-5.395m0-3.46c.495.413.811 1.035.811 1.73 0 .695-.316 1.317-.811 1.73m0-3.46a24.347 24.347 0 010 3.46" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 font-heading mb-2">Spread the Word</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Tell other parents about PTA events and share our updates. The more people who get involved, the more we can do for our school.
+          </p>
+        </div>
+
+        <!-- Contact Us -->
+        <div class="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 md:p-8 hover:shadow-md transition-shadow duration-200">
+          <div class="w-12 h-12 mb-4 bg-accent-100 text-accent-600 rounded-xl flex items-center justify-center">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 font-heading mb-2">Get in Touch</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Have questions or ideas? We'd love to hear from you. Reach out to the PTA committee at any time.
+          </p>
+          <a href="/about/contact/" class="inline-flex items-center gap-1 mt-3 text-sm font-semibold text-primary-600 hover:text-primary-700 transition-colors">
+            Contact us
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

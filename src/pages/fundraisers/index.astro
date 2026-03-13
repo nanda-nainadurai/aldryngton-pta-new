@@ -1,0 +1,194 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/PageHeader.astro';
+---
+
+<BaseLayout title="Fundraising">
+  <PageHeader
+    title="Fundraising"
+    subtitle="Supporting our school through community fundraising"
+    breadcrumbs={[{ label: 'Fundraising' }]}
+  />
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 space-y-12">
+
+    <!-- PTA Calendar of Events -->
+    <section>
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 font-heading mb-4">PTA Calendar of Events</h2>
+      <div class="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 md:p-8">
+        <div class="flex items-start gap-4">
+          <div class="shrink-0 w-10 h-10 rounded-xl bg-accent-50 flex items-center justify-center">
+            <svg class="w-5 h-5 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <div>
+            <p class="text-gray-700 leading-relaxed">
+              If you would like to download any of the dates listed below to your electronic calendar you can do so via the school calendar in the Parents section of the School Website:
+            </p>
+            <a
+              href="https://aldryngton.wokingham.sch.uk/home/parents/calendar/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 mt-3 text-primary-600 font-semibold hover:text-primary-700 transition-colors"
+            >
+              View School Calendar
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Save Our Pool Campaign -->
+    <section>
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 font-heading mb-4">Save Our Pool Campaign</h2>
+      <div class="bg-gradient-to-br from-warm-50 to-white rounded-2xl border-2 border-warm-400 shadow-md p-6 md:p-8">
+        <div class="flex flex-col md:flex-row items-start gap-6">
+          <div class="shrink-0 w-14 h-14 rounded-2xl bg-warm-400 flex items-center justify-center">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+            </svg>
+          </div>
+          <div class="flex-1">
+            <h3 class="text-xl font-bold text-gray-900 font-heading mb-3">Help Us Save the Pool!</h3>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              Our beloved pool needs an upgrade! Our pool was hand dug by parents and teachers in the 1970s and has been a vital facility for all these years. Help us finish the update by donating here.
+            </p>
+            <a
+              href="https://www.crowdfunder.co.uk"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 px-6 py-3 bg-warm-400 text-white font-bold rounded-xl hover:bg-warm-500 transition-colors shadow-sm"
+            >
+              Save Our Pool Crowdfunder
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kumon Partnership -->
+    <section>
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 font-heading mb-4">Kumon Partnership</h2>
+      <div class="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 md:p-8">
+        <div class="flex items-start gap-4">
+          <div class="shrink-0 w-10 h-10 rounded-xl bg-primary-50 flex items-center justify-center">
+            <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+            </svg>
+          </div>
+          <div>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              We have a referral partnership with Kumon. When you enrol your child, mention the Aldryngton PTA referral to benefit the school and your family.
+            </p>
+            <div class="bg-primary-50 rounded-xl p-5 space-y-3">
+              <div class="flex items-center gap-3">
+                <span class="text-sm font-semibold text-primary-800 bg-primary-100 px-3 py-1 rounded-lg">Referral Code</span>
+                <span class="text-lg font-bold text-primary-700 font-heading tracking-wider">CXFDS3</span>
+              </div>
+              <ul class="space-y-2 text-sm text-primary-800">
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-primary-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span><strong>£20 voucher</strong> per enrolled student for the PTA</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-primary-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span><strong>Waiver of £55 registration fee</strong> for your child</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Other Fundraising Schemes -->
+    <section>
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 font-heading mb-4">Other Fundraising Schemes</h2>
+      <div class="grid gap-6 sm:grid-cols-2">
+        <a href="/about/match-funding/" class="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:border-primary-200 transition-all duration-200 p-6 block">
+          <div class="flex items-start gap-4">
+            <div class="shrink-0 w-10 h-10 rounded-xl bg-accent-50 flex items-center justify-center">
+              <svg class="w-5 h-5 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-gray-900 font-heading mb-1">Match Funding</h3>
+              <p class="text-gray-600 text-sm leading-relaxed">
+                Many employers offer match funding schemes that can double your fundraising contributions. Find out how to take advantage of this.
+              </p>
+              <span class="inline-flex items-center gap-1 mt-3 text-sm font-semibold text-primary-600">
+                Learn more
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <div class="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
+          <div class="flex items-start gap-4">
+            <div class="shrink-0 w-10 h-10 rounded-xl bg-primary-50 flex items-center justify-center">
+              <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-gray-900 font-heading mb-1">Easy Fundraising</h3>
+              <p class="text-gray-600 text-sm leading-relaxed">
+                Raise money for the PTA every time you shop online. Simply sign up and shop through Easy Fundraising to generate donations at no extra cost to you.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Links -->
+    <section>
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 font-heading mb-4">Fundraising Resources</h2>
+      <div class="grid gap-4 sm:grid-cols-3">
+        <a href="/fundraisers/communications/" class="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:border-primary-200 transition-all duration-200 p-6 text-center block">
+          <div class="w-12 h-12 rounded-2xl bg-primary-50 flex items-center justify-center mx-auto mb-3">
+            <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-gray-900 font-heading">Communications</h3>
+          <p class="text-sm text-gray-500 mt-1">Newsletters and updates</p>
+        </a>
+        <a href="/fundraisers/summaries/" class="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:border-primary-200 transition-all duration-200 p-6 text-center block">
+          <div class="w-12 h-12 rounded-2xl bg-accent-50 flex items-center justify-center mx-auto mb-3">
+            <svg class="w-6 h-6 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-gray-900 font-heading">Fundraising Summaries</h3>
+          <p class="text-sm text-gray-500 mt-1">Reports and totals</p>
+        </a>
+        <a href="/fundraisers/forms/" class="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:border-primary-200 transition-all duration-200 p-6 text-center block">
+          <div class="w-12 h-12 rounded-2xl bg-warm-50 flex items-center justify-center mx-auto mb-3">
+            <svg class="w-6 h-6 text-warm-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-gray-900 font-heading">Forms & Documents</h3>
+          <p class="text-sm text-gray-500 mt-1">Templates and resources</p>
+        </a>
+      </div>
+    </section>
+
+  </div>
+</BaseLayout>

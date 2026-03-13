@@ -1,0 +1,126 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import Card from '../../components/Card.astro';
+
+const companies = [
+  'Argos', 'Asda', 'Barclays Bank', 'Boots', 'British Gas', 'BP', 'BT',
+  'Cap Gemini', 'Centrica', 'Citibank', 'Dell', 'First Group', 'GSK',
+  'HBOS', 'HSBC', 'IBM', 'Lloyds Bank', 'Sainsburys', 'Kingfisher',
+  'Microsoft', 'National Grid', 'SSE', 'Sky', 'Tesco', 'Thames Water',
+  'Unilever', 'Vodafone',
+];
+---
+
+<BaseLayout title="Match Funding">
+  <PageHeader
+    title="Match Funding"
+    subtitle="Double your fundraising impact through your employer's match funding scheme."
+    breadcrumbs={[
+      { label: 'About', href: '/about' },
+      { label: 'Match Funding' },
+    ]}
+  />
+
+  <!-- What is Match Funding -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-900 font-heading mb-6">What is Match Funding?</h2>
+          <p class="text-gray-600 text-lg leading-relaxed mb-4">
+            Match funding is a scheme offered by many employers where they agree to match the money that their employees raise for charity. This means that for every pound you raise through PTA activities, your employer could contribute an equal amount — effectively doubling your fundraising efforts.
+          </p>
+          <p class="text-gray-600 text-lg leading-relaxed mb-4">
+            Many large companies have these schemes in place, and it's often a straightforward process. You simply need to let your employer know that you've volunteered at or helped organise a PTA event, and they may match the funds raised.
+          </p>
+          <p class="text-gray-600 text-lg leading-relaxed">
+            Some employers will also match donations you make personally, or provide grants for the hours you volunteer. It's always worth checking with your HR department to see what's available.
+          </p>
+        </div>
+        <div class="bg-gradient-to-br from-primary-50 to-accent-50 rounded-2xl border border-primary-100 p-8">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 bg-primary-200 rounded-xl flex items-center justify-center">
+              <svg class="w-6 h-6 text-primary-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 font-heading">How It Works</h3>
+          </div>
+          <ol class="space-y-4">
+            <li class="flex gap-3">
+              <span class="flex-shrink-0 w-7 h-7 bg-primary-600 text-white rounded-full flex items-center justify-center text-sm font-bold">1</span>
+              <p class="text-gray-700">Volunteer your time at a PTA event or make a donation</p>
+            </li>
+            <li class="flex gap-3">
+              <span class="flex-shrink-0 w-7 h-7 bg-primary-600 text-white rounded-full flex items-center justify-center text-sm font-bold">2</span>
+              <p class="text-gray-700">Check with your employer if they offer a match funding scheme</p>
+            </li>
+            <li class="flex gap-3">
+              <span class="flex-shrink-0 w-7 h-7 bg-primary-600 text-white rounded-full flex items-center justify-center text-sm font-bold">3</span>
+              <p class="text-gray-700">Submit a claim to your employer with details of the event</p>
+            </li>
+            <li class="flex gap-3">
+              <span class="flex-shrink-0 w-7 h-7 bg-primary-600 text-white rounded-full flex items-center justify-center text-sm font-bold">4</span>
+              <p class="text-gray-700">Your employer matches the amount, doubling the PTA's income</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Companies -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 font-heading mb-3">Companies That Offer Match Funding</h2>
+      <p class="text-gray-600 text-lg mb-8 max-w-3xl">
+        The following companies are known to offer match funding schemes. If your employer is on this list, please get in touch — you could help us raise even more for the school.
+      </p>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
+        {companies.map((company) => (
+          <div class="bg-gray-50 rounded-xl border border-gray-100 px-4 py-3 text-center hover:border-primary-200 hover:bg-primary-50 transition-all duration-200">
+            <span class="text-sm font-semibold text-gray-700">{company}</span>
+          </div>
+        ))}
+      </div>
+      <p class="mt-6 text-sm text-gray-500">
+        This list is not exhaustive. Many other companies offer match funding — please check with your employer's HR department.
+      </p>
+    </div>
+  </section>
+
+  <!-- Why It's Important -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 font-heading mb-6">Why Match Funding Matters</h2>
+        <p class="text-gray-600 text-lg leading-relaxed mb-4">
+          Aldryngton Primary School receives very little additional funding via the pupil premium. This means the PTA plays a critical role in providing the extras that make school life special — from new playground equipment and library books to enrichment trips and creative workshops.
+        </p>
+        <p class="text-gray-600 text-lg leading-relaxed mb-8">
+          Match funding allows the PTA to effectively double what we raise at events. Even a single match funding claim can make a significant difference, turning a successful bake sale or quiz night into something truly impactful for every child at the school.
+        </p>
+      </div>
+
+      <!-- CTA -->
+      <div class="max-w-2xl mx-auto">
+        <div class="bg-gradient-to-br from-primary-600 to-primary-800 rounded-2xl p-8 md:p-10 text-center text-white">
+          <h3 class="text-xl md:text-2xl font-bold font-heading mb-3">Can Your Employer Help?</h3>
+          <p class="text-primary-100 mb-6">
+            If your employer offers match funding and you'd like to help the PTA benefit from it, please get in touch with our Vice Chair. We can provide any documentation your employer may need.
+          </p>
+          <a
+            href="mailto:vicechair@aldryngtonpta.com"
+            class="inline-flex items-center gap-2 bg-white text-primary-700 font-semibold px-6 py-3 rounded-xl hover:bg-primary-50 transition-colors duration-200"
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            vicechair@aldryngtonpta.com
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

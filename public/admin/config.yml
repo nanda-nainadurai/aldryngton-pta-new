@@ -1,0 +1,126 @@
+backend:
+  name: github
+  repo: your-org/aldryngton-pta  # UPDATE: Change to your GitHub repo
+  branch: main
+  auth_endpoint: /api/auth  # For Netlify Identity, or use GitHub OAuth
+
+# When working locally
+local_backend: true
+
+media_folder: public/uploads
+public_folder: /uploads
+
+site_url: https://aldryngtonpta.com
+
+collections:
+  - name: pages
+    label: "Main Pages"
+    files:
+      - name: home
+        label: "Home Page"
+        file: "src/content/home.json"
+        fields:
+          - { name: heroTitle, label: "Hero Title", widget: string, default: "Welcome to Aldryngton PTA" }
+          - { name: heroSubtitle, label: "Hero Subtitle", widget: text }
+          - { name: nextMeetingDate, label: "Next Meeting Date", widget: string }
+
+      - name: pta-details
+        label: "PTA Details"
+        file: "src/content/pta-details.json"
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: intro, label: "Introduction", widget: markdown }
+          - { name: whatWeDo, label: "What Does the PTA Do?", widget: markdown }
+          - { name: getInvolved, label: "Ways to Get Involved", widget: markdown }
+
+      - name: contact
+        label: "Contact"
+        file: "src/content/contact.json"
+        fields:
+          - { name: generalEmail, label: "General Email", widget: string }
+          - name: officers
+            label: "PTA Officers"
+            widget: list
+            fields:
+              - { name: role, label: Role, widget: string }
+              - { name: name, label: Name, widget: string }
+              - { name: email, label: Email, widget: string }
+          - name: eventTeams
+            label: "Event Team Contacts"
+            widget: list
+            fields:
+              - { name: team, label: "Team Name", widget: string }
+              - { name: email, label: Email, widget: string }
+
+  - name: events
+    label: "Events"
+    files:
+      - name: pool-club
+        label: "Pool Club"
+        file: "src/content/pool-club.json"
+        fields:
+          - { name: season, label: "Season Dates", widget: string }
+          - { name: applicationStatus, label: "Application Status", widget: string }
+          - { name: membershipOption1Price, label: "Membership Option 1 Price", widget: string }
+          - { name: membershipOption2Price, label: "Membership Option 2 Price", widget: string }
+          - { name: content, label: "Additional Content", widget: markdown }
+
+      - name: try-a-tri
+        label: "Try a Tri"
+        file: "src/content/try-a-tri.json"
+        fields:
+          - { name: nextEventDate, label: "Next Event Date", widget: string }
+          - { name: costPerChild, label: "Cost Per Child", widget: string }
+          - { name: content, label: "Content", widget: markdown }
+
+      - name: santas-grotto
+        label: "Santa's Grotto"
+        file: "src/content/santas-grotto.json"
+        fields:
+          - { name: eventDate, label: "Event Date", widget: string }
+          - { name: pricePerChild, label: "Price Per Child", widget: string }
+          - { name: bookingInfo, label: "Booking Information", widget: markdown }
+
+      - name: circus
+        label: "Circus"
+        file: "src/content/circus.json"
+        fields:
+          - { name: lastEventDate, label: "Last Event Date", widget: string }
+          - { name: nextEventInfo, label: "Next Event Info", widget: string }
+          - { name: description, label: "Description", widget: markdown }
+
+      - name: uniform
+        label: "Second Hand Uniform"
+        file: "src/content/uniform.json"
+        fields:
+          - { name: howToDonate, label: "How to Donate", widget: markdown }
+          - { name: howToBuy, label: "How to Buy", widget: markdown }
+          - name: prices
+            label: "Prices"
+            widget: list
+            fields:
+              - { name: item, label: Item, widget: string }
+              - { name: price, label: Price, widget: string }
+
+  - name: meetings
+    label: "Meetings"
+    files:
+      - name: meetings-info
+        label: "Meetings Overview"
+        file: "src/content/meetings.json"
+        fields:
+          - { name: nextMeetingDate, label: "Next Meeting Date", widget: string }
+          - { name: nextAGMDate, label: "Next AGM Date", widget: string }
+          - { name: content, label: "Content", widget: markdown }
+
+  - name: fundraising
+    label: "Fundraising"
+    files:
+      - name: fundraising-main
+        label: "Fundraising Overview"
+        file: "src/content/fundraising.json"
+        fields:
+          - { name: calendarInfo, label: "Calendar Info", widget: markdown }
+          - { name: poolCampaign, label: "Save Our Pool Content", widget: markdown }
+          - { name: kumonInfo, label: "Kumon Partnership Info", widget: markdown }
+          - { name: otherSchemes, label: "Other Schemes", widget: markdown }

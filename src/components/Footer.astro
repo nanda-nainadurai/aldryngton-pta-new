@@ -1,0 +1,70 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-gray-900 text-gray-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Brand -->
+      <div class="lg:col-span-1">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-10 h-10 bg-primary-600 rounded-xl flex items-center justify-center">
+            <span class="text-white font-bold text-lg">A</span>
+          </div>
+          <div>
+            <span class="text-lg font-bold text-white font-heading">Aldryngton</span>
+            <span class="text-lg font-bold text-primary-400 font-heading"> PTA</span>
+          </div>
+        </div>
+        <p class="text-sm text-gray-400 leading-relaxed">
+          Supporting Aldryngton Primary School through community fundraising, events, and volunteering.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-white font-semibold mb-4 font-heading">Quick Links</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/about/" class="hover:text-primary-400 transition-colors">PTA Details</a></li>
+          <li><a href="/about/contact/" class="hover:text-primary-400 transition-colors">Contact Us</a></li>
+          <li><a href="/meetings/" class="hover:text-primary-400 transition-colors">Meetings</a></li>
+          <li><a href="/fundraisers/" class="hover:text-primary-400 transition-colors">Fundraising</a></li>
+          <li><a href="/pool-club/" class="hover:text-primary-400 transition-colors">Pool Club</a></li>
+        </ul>
+      </div>
+
+      <!-- Events -->
+      <div>
+        <h3 class="text-white font-semibold mb-4 font-heading">Events</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/events/try-a-tri/" class="hover:text-primary-400 transition-colors">Try a Tri</a></li>
+          <li><a href="/events/santas-grotto/" class="hover:text-primary-400 transition-colors">Santa's Grotto</a></li>
+          <li><a href="/events/uniform/" class="hover:text-primary-400 transition-colors">Second Hand Uniform</a></li>
+          <li><a href="/events/circus/" class="hover:text-primary-400 transition-colors">Circus</a></li>
+          <li><a href="/about/match-funding/" class="hover:text-primary-400 transition-colors">Match Funding</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h3 class="text-white font-semibold mb-4 font-heading">Get in Touch</h3>
+        <ul class="space-y-2 text-sm">
+          <li>
+            <a href="mailto:ptaofficers@aldryngtonpta.com" class="hover:text-primary-400 transition-colors">
+              ptaofficers@aldryngtonpta.com
+            </a>
+          </li>
+          <li>
+            <a href="https://aldryngton.wokingham.sch.uk" target="_blank" rel="noopener noreferrer" class="hover:text-primary-400 transition-colors">
+              School Website
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-gray-800 mt-10 pt-8 text-center text-sm text-gray-500">
+      <p>&copy; {currentYear} Aldryngton PTA. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
