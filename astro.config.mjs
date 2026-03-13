@@ -3,7 +3,8 @@ import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
-  site: 'https://aldryngtonpta.com',
+  site: 'https://nanda-nainadurai.github.io',
+  base: '/aldryngton-pta-new',
   vite: {
     plugins: [tailwindcss()],
   },
