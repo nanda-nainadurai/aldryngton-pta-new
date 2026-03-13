@@ -1,0 +1,106 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/PageHeader.astro';
+---
+
+<BaseLayout title="Santa's Grotto">
+  <PageHeader
+    title="Santa's Grotto"
+    subtitle="Experience the magic of Christmas at Aldryngton"
+    breadcrumbs={[
+      { label: 'Events', href: '/events/' },
+      { label: "Santa's Grotto" },
+    ]}
+  />
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 space-y-12">
+
+    <!-- Event Info -->
+    <section>
+      <div class="bg-gradient-to-r from-warm-50 to-primary-50 rounded-2xl border border-warm-200 p-6 md:p-8 text-center">
+        <p class="text-sm font-semibold text-warm-500 uppercase tracking-wider mb-1">Last Event</p>
+        <p class="text-2xl font-bold text-gray-900 font-heading">Saturday 6th December 2025</p>
+        <div class="mt-4 flex flex-wrap justify-center gap-6 text-gray-700">
+          <div class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span>Doors open <strong>11:00am</strong></span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-warm-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+            </svg>
+            <span>Santa's Grand Entrance at <strong>11:05am</strong></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section>
+      <h2 class="text-2xl font-bold text-gray-900 font-heading mb-4">About the Event</h2>
+      <div class="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 md:p-8">
+        <p class="text-gray-700 leading-relaxed">
+          Every year, Santa makes a very special trip to Aldryngton to meet the children in his
+          magical grotto. Each child gets the chance to meet Santa, share their Christmas wishes,
+          and receive a wonderful gift. It's a truly enchanting experience for the whole family.
+        </p>
+      </div>
+    </section>
+
+    <!-- Booking -->
+    <section>
+      <h2 class="text-2xl font-bold text-gray-900 font-heading mb-4">Booking Information</h2>
+      <div class="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 md:p-8">
+        <div class="grid sm:grid-cols-3 gap-6">
+          <div class="text-center p-4">
+            <div class="bg-primary-100 rounded-full w-14 h-14 flex items-center justify-center mx-auto mb-3">
+              <svg class="w-7 h-7 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3 class="font-bold text-gray-900 font-heading mb-1">Online Booking</h3>
+            <p class="text-sm text-gray-600">Slots are booked through our online booking system</p>
+          </div>
+          <div class="text-center p-4">
+            <div class="bg-accent-100 rounded-full w-14 h-14 flex items-center justify-center mx-auto mb-3">
+              <span class="text-accent-600 font-bold text-lg">&pound;6</span>
+            </div>
+            <h3 class="font-bold text-gray-900 font-heading mb-1">Per Child</h3>
+            <p class="text-sm text-gray-600">Each child receives a gift from Santa</p>
+          </div>
+          <div class="text-center p-4">
+            <div class="bg-warm-100 rounded-full w-14 h-14 flex items-center justify-center mx-auto mb-3">
+              <svg class="w-7 h-7 text-warm-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <h3 class="font-bold text-gray-900 font-heading mb-1">Up to 3 Children</h3>
+            <p class="text-sm text-gray-600">Per booking slot</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section>
+      <div class="bg-gradient-to-br from-primary-50 to-accent-50 rounded-2xl border border-primary-100 p-6 md:p-8">
+        <h2 class="text-2xl font-bold text-gray-900 font-heading mb-3">Get in Touch</h2>
+        <p class="text-gray-700 leading-relaxed mb-4">
+          For questions about Santa's Grotto, including bookings and volunteering, please get in touch.
+        </p>
+        <a
+          href="mailto:santa@aldryngtonpta.com"
+          class="inline-flex items-center gap-2 bg-primary-600 text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-primary-700 transition-colors"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          Contact santa@aldryngtonpta.com
+        </a>
+      </div>
+    </section>
+
+  </div>
+</BaseLayout>

@@ -1,0 +1,203 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/PageHeader.astro';
+
+const timetable = [
+  { teams: 'Foundation & Lower', registration: '11:00\u201311:30', briefing: '11:40', finish: '13:30' },
+  { teams: 'Middle School', registration: '12:30\u201313:00', briefing: '13:10', finish: '15:00' },
+  { teams: 'Upper School', registration: '14:00\u201314:30', briefing: '14:40', finish: '16:00' },
+];
+
+const distances = [
+  { teams: 'Foundation & Lower', swim: '3 widths (22.5m)', cycle: '1 lap (500m)', run: '1 lap (350m)' },
+  { teams: 'Middle School', swim: '3 lengths (51m)', cycle: '2 laps (1km)', run: '2 laps (700m)' },
+  { teams: 'Upper School', swim: '5 lengths (85m)', cycle: '3 laps (1.5km)', run: '3 laps (1km)' },
+];
+---
+
+<BaseLayout title="Try a Tri">
+  <PageHeader
+    title="Try a Tri"
+    subtitle="A fun triathlon for Aldryngton pupils"
+    breadcrumbs={[
+      { label: 'Events', href: '/events/' },
+      { label: 'Try a Tri' },
+    ]}
+  />
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 space-y-12">
+
+    <!-- Next Event -->
+    <section>
+      <div class="bg-gradient-to-r from-accent-50 to-primary-50 rounded-2xl border border-accent-200 p-6 md:p-8 text-center">
+        <p class="text-sm font-semibold text-accent-600 uppercase tracking-wider mb-1">Next Event</p>
+        <p class="text-2xl font-bold text-gray-900 font-heading">Try-a-Tri 2026</p>
+        <p class="mt-1 text-gray-600">Date to be confirmed</p>
+      </div>
+    </section>
+
+    <!-- What is it -->
+    <section>
+      <h2 class="text-2xl font-bold text-gray-900 font-heading mb-4">What is Try a Tri?</h2>
+      <div class="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 md:p-8">
+        <p class="text-gray-700 leading-relaxed">
+          A fun Triathlon. A 3-in-1 race made up of swimming, cycling and running. Open to all
+          Aldryngton pupils from Foundation to Year 6. Teams of 3 &mdash; one swimmer, one
+          cyclist, one runner.
+        </p>
+      </div>
+    </section>
+
+    <!-- Timetable -->
+    <section>
+      <h2 class="text-2xl font-bold text-gray-900 font-heading mb-4">Timetable</h2>
+      <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left">
+            <thead>
+              <tr class="bg-primary-600 text-white">
+                <th class="px-5 py-4 text-sm font-semibold uppercase tracking-wider">Teams</th>
+                <th class="px-5 py-4 text-sm font-semibold uppercase tracking-wider">Registration</th>
+                <th class="px-5 py-4 text-sm font-semibold uppercase tracking-wider">Race Briefing</th>
+                <th class="px-5 py-4 text-sm font-semibold uppercase tracking-wider">Finish</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100">
+              {timetable.map((row, i) => (
+                <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                  <td class="px-5 py-4 font-semibold text-gray-900">{row.teams}</td>
+                  <td class="px-5 py-4 text-gray-700">{row.registration}</td>
+                  <td class="px-5 py-4 text-gray-700">{row.briefing}</td>
+                  <td class="px-5 py-4 text-gray-700">{row.finish}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Distances -->
+    <section>
+      <h2 class="text-2xl font-bold text-gray-900 font-heading mb-4">Distances</h2>
+      <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left">
+            <thead>
+              <tr class="bg-accent-600 text-white">
+                <th class="px-5 py-4 text-sm font-semibold uppercase tracking-wider">Teams</th>
+                <th class="px-5 py-4 text-sm font-semibold uppercase tracking-wider">Swim</th>
+                <th class="px-5 py-4 text-sm font-semibold uppercase tracking-wider">Cycle</th>
+                <th class="px-5 py-4 text-sm font-semibold uppercase tracking-wider">Run</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100">
+              {distances.map((row, i) => (
+                <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                  <td class="px-5 py-4 font-semibold text-gray-900">{row.teams}</td>
+                  <td class="px-5 py-4 text-gray-700">{row.swim}</td>
+                  <td class="px-5 py-4 text-gray-700">{row.cycle}</td>
+                  <td class="px-5 py-4 text-gray-700">{row.run}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cost -->
+    <section>
+      <h2 class="text-2xl font-bold text-gray-900 font-heading mb-4">Cost</h2>
+      <div class="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 md:p-8">
+        <div class="flex flex-wrap gap-6">
+          <div class="flex items-center gap-3">
+            <span class="bg-primary-100 text-primary-700 font-bold text-lg rounded-lg px-4 py-2">&pound;6</span>
+            <span class="text-gray-700">per child</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="bg-accent-100 text-accent-700 font-bold text-lg rounded-lg px-4 py-2">&pound;5</span>
+            <span class="text-gray-700">for additional siblings</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What to Bring -->
+    <section>
+      <h2 class="text-2xl font-bold text-gray-900 font-heading mb-4">What to Bring</h2>
+      <div class="grid sm:grid-cols-3 gap-4">
+        <!-- Swim -->
+        <div class="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="bg-accent-100 text-accent-600 rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">1</span>
+            <h3 class="font-bold text-gray-900 font-heading">Swim</h3>
+          </div>
+          <ul class="space-y-1.5 text-sm text-gray-600">
+            <li>Swimming costume / trunks</li>
+            <li>Goggles (optional)</li>
+            <li>Towel</li>
+            <li>Swimming hat (provided if needed)</li>
+          </ul>
+        </div>
+        <!-- Cycle -->
+        <div class="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="bg-primary-100 text-primary-600 rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">2</span>
+            <h3 class="font-bold text-gray-900 font-heading">Cycle</h3>
+          </div>
+          <ul class="space-y-1.5 text-sm text-gray-600">
+            <li>Bicycle in good working order</li>
+            <li>Cycle helmet (compulsory)</li>
+            <li>Closed-toe shoes</li>
+          </ul>
+        </div>
+        <!-- Run -->
+        <div class="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="bg-warm-100 text-warm-500 rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">3</span>
+            <h3 class="font-bold text-gray-900 font-heading">Run</h3>
+          </div>
+          <ul class="space-y-1.5 text-sm text-gray-600">
+            <li>Trainers / running shoes</li>
+            <li>Comfortable clothing</li>
+            <li>Water bottle</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Food & Drink -->
+    <section>
+      <h2 class="text-2xl font-bold text-gray-900 font-heading mb-4">Food &amp; Drink</h2>
+      <div class="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 md:p-8">
+        <p class="text-gray-700 leading-relaxed">
+          Enjoy a BBQ, licensed bar, candyfloss and ice creams throughout the day. There's
+          something for everyone to refuel on while cheering the racers.
+        </p>
+      </div>
+    </section>
+
+    <!-- Volunteering -->
+    <section>
+      <div class="bg-gradient-to-br from-primary-50 to-accent-50 rounded-2xl border border-primary-100 p-6 md:p-8">
+        <h2 class="text-2xl font-bold text-gray-900 font-heading mb-3">Can You Help?</h2>
+        <p class="text-gray-700 leading-relaxed mb-4">
+          Try a Tri relies on a fantastic team of volunteers to make the event a success. Whether
+          you can help with marshalling, registration, refreshments, or setting up &mdash; we would
+          love to hear from you.
+        </p>
+        <a
+          href="mailto:tryatri@aldryngtonpta.com"
+          class="inline-flex items-center gap-2 bg-primary-600 text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-primary-700 transition-colors"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          Contact tryatri@aldryngtonpta.com
+        </a>
+      </div>
+    </section>
+
+  </div>
+</BaseLayout>

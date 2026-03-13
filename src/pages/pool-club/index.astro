@@ -1,0 +1,284 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/PageHeader.astro';
+
+const currentPath = '/pool-club/';
+const subNav = [
+  { label: 'Overview', href: '/pool-club/' },
+  { label: 'FAQs', href: '/pool-club/faqs/' },
+  { label: 'Safety', href: '/pool-club/safety/' },
+  { label: 'Application', href: '/pool-club/application/' },
+];
+---
+
+<BaseLayout title="Pool Club" description="Aldryngton School PTA Pool Club 2025 - membership, opening times, and how to join.">
+  <PageHeader
+    title="Pool Club"
+    subtitle="Aldryngton School PTA Pool Club 2025"
+  />
+
+  <!-- Sub Navigation -->
+  <div class="bg-white border-b border-gray-200 sticky top-0 z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex gap-2 py-3 overflow-x-auto" aria-label="Pool Club sections">
+        {subNav.map((item) => (
+          <a
+            href={item.href}
+            class:list={[
+              'px-4 py-2 rounded-full text-sm font-semibold whitespace-nowrap transition-colors duration-200',
+              item.href === currentPath
+                ? 'bg-primary-600 text-white'
+                : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900',
+            ]}
+          >
+            {item.label}
+          </a>
+        ))}
+      </nav>
+    </div>
+  </div>
+
+  <!-- Save Our Pool Campaign -->
+  <section class="py-10 md:py-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-gradient-to-r from-accent-50 to-accent-100 border border-accent-200 rounded-2xl p-6 sm:p-8">
+        <div class="flex items-start gap-4">
+          <div class="flex-shrink-0 bg-accent-600 text-white rounded-xl p-3">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+            </svg>
+          </div>
+          <div>
+            <h2 class="text-xl font-bold text-accent-900 font-heading mb-2">Save Our Pool Campaign</h2>
+            <p class="text-accent-800 leading-relaxed">
+              Our beloved pool needs an upgrade! Hand dug by parents and teachers in the 1970s, it has served generations of Aldryngton families. Help us finish the update by donating to the campaign.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Overview -->
+  <section class="pb-12 md:pb-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 font-heading mb-6">Quick Overview</h2>
+      <div class="max-w-3xl">
+        <p class="text-gray-600 text-lg leading-relaxed mb-4">
+          Pool Club is run entirely by parent volunteers. All members share supervisory duties at the poolside to keep the club running safely and affordably for everyone.
+        </p>
+        <ul class="space-y-3 text-gray-700 text-lg">
+          <li class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            Members share either <strong>3 or 5 supervisory duties</strong> (1 hour each) during the season, depending on membership type.
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            New members must complete <strong>2 shadow duties</strong> before taking on solo supervision.
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            Membership entitles the <strong>whole family</strong> to use the pool.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2025 Membership Options -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 font-heading mb-3">2025 Membership Options</h2>
+      <p class="text-gray-600 text-lg mb-8">Membership entitles your whole family to use the pool for the entire season.</p>
+      <div class="grid sm:grid-cols-2 gap-8 max-w-3xl">
+        <!-- Option 1 -->
+        <div class="bg-gray-50 rounded-2xl border border-gray-200 p-6 sm:p-8 relative">
+          <div class="mb-4">
+            <span class="inline-block bg-primary-100 text-primary-700 text-xs font-bold uppercase tracking-wide px-3 py-1 rounded-full">Standard</span>
+          </div>
+          <div class="mb-4">
+            <span class="text-4xl font-extrabold text-gray-900 font-heading">&pound;55</span>
+            <span class="text-sm text-gray-500 block mt-1">(&pound;54 + &pound;1 Crowdfunder fee)</span>
+          </div>
+          <ul class="space-y-2 text-gray-700">
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              Minimum <strong>5 rota sessions</strong>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              Whole family membership
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              Full season access
+            </li>
+          </ul>
+        </div>
+        <!-- Option 2 -->
+        <div class="bg-gradient-to-br from-primary-50 to-primary-100 rounded-2xl border-2 border-primary-300 p-6 sm:p-8 relative">
+          <div class="mb-4">
+            <span class="inline-block bg-primary-600 text-white text-xs font-bold uppercase tracking-wide px-3 py-1 rounded-full">Fewer Duties</span>
+          </div>
+          <div class="mb-4">
+            <span class="text-4xl font-extrabold text-gray-900 font-heading">&pound;75</span>
+            <span class="text-sm text-gray-500 block mt-1">(&pound;74 + &pound;1 Crowdfunder fee)</span>
+          </div>
+          <ul class="space-y-2 text-gray-700">
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              Minimum <strong>3 rota sessions</strong>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              Whole family membership
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              Full season access
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Opening Times -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 font-heading mb-8">Pool Club Opening Times</h2>
+      <div class="grid lg:grid-cols-2 gap-8">
+        <!-- Term Time -->
+        <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
+          <div class="bg-primary-600 text-white px-6 py-4">
+            <h3 class="text-lg font-bold font-heading">Term Time</h3>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="bg-gray-50 border-b border-gray-200">
+                  <th class="text-left px-6 py-3 font-semibold text-gray-700">Day</th>
+                  <th class="text-left px-6 py-3 font-semibold text-gray-700">Rota</th>
+                  <th class="text-left px-6 py-3 font-semibold text-gray-700">Non-Rota</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-100">
+                <tr>
+                  <td class="px-6 py-3 font-medium text-gray-900">Mon &ndash; Thu</td>
+                  <td class="px-6 py-3 text-gray-600">3:30pm &ndash; 5:30pm</td>
+                  <td class="px-6 py-3 text-gray-600">5:30pm &ndash; 8:00pm</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-3 font-medium text-gray-900">Friday</td>
+                  <td class="px-6 py-3 text-gray-600">3:30pm &ndash; 5:30pm</td>
+                  <td class="px-6 py-3 text-gray-400 italic">Rota only</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-3 font-medium text-gray-900">Inset Days</td>
+                  <td class="px-6 py-3 text-gray-600" colspan="2">9:00am &ndash; 5:00pm</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="px-6 py-3 bg-gray-50 text-xs text-gray-500">
+            Overall: Mon&ndash;Thu 3:30pm&ndash;8:00pm &middot; Fri 3:30pm&ndash;5:30pm
+          </div>
+        </div>
+
+        <!-- Holiday Time -->
+        <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
+          <div class="bg-accent-600 text-white px-6 py-4">
+            <h3 class="text-lg font-bold font-heading">Holiday Time</h3>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="bg-gray-50 border-b border-gray-200">
+                  <th class="text-left px-6 py-3 font-semibold text-gray-700">Day</th>
+                  <th class="text-left px-6 py-3 font-semibold text-gray-700">Rota</th>
+                  <th class="text-left px-6 py-3 font-semibold text-gray-700">Non-Rota</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-100">
+                <tr>
+                  <td class="px-6 py-3 font-medium text-gray-900">Mon &ndash; Thu</td>
+                  <td class="px-6 py-3 text-gray-600">2:00pm &ndash; 5:00pm</td>
+                  <td class="px-6 py-3 text-gray-600">5:00pm &ndash; 8:00pm</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-3 font-medium text-gray-900">Friday</td>
+                  <td class="px-6 py-3 text-gray-600">2:00pm &ndash; 5:00pm</td>
+                  <td class="px-6 py-3 text-gray-400 italic">Rota only</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="px-6 py-3 bg-gray-50 text-xs text-gray-500">
+            Overall: Mon&ndash;Thu 2:00pm&ndash;8:00pm &middot; Fri 2:00pm&ndash;5:00pm
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Season & Pool Info -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-gray-50 rounded-2xl border border-gray-100 p-6">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-10 h-10 bg-primary-100 rounded-xl flex items-center justify-center">
+              <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3 class="font-bold text-gray-900 font-heading">2025 Season</h3>
+          </div>
+          <p class="text-gray-600">Monday 12th May until Friday 19th September</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl border border-gray-100 p-6">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-10 h-10 bg-accent-100 rounded-xl flex items-center justify-center">
+              <svg class="w-5 h-5 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+              </svg>
+            </div>
+            <h3 class="font-bold text-gray-900 font-heading">Pool Dimensions</h3>
+          </div>
+          <p class="text-gray-600">17m x 7.5m &mdash; 0.8m shallow end, 1.2m deep end</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl border border-gray-100 p-6">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-10 h-10 bg-warm-100 rounded-xl flex items-center justify-center">
+              <svg class="w-5 h-5 text-warm-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3 class="font-bold text-gray-900 font-heading">Contact</h3>
+          </div>
+          <a href="mailto:pool@aldryngtonpta.com" class="text-primary-600 hover:text-primary-700 font-medium transition-colors">
+            pool@aldryngtonpta.com
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

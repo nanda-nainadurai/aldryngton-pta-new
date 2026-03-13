@@ -1,0 +1,183 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/PageHeader.astro';
+
+const currentPath = '/pool-club/application/';
+const subNav = [
+  { label: 'Overview', href: '/pool-club/' },
+  { label: 'FAQs', href: '/pool-club/faqs/' },
+  { label: 'Safety', href: '/pool-club/safety/' },
+  { label: 'Application', href: '/pool-club/application/' },
+];
+---
+
+<BaseLayout title="Pool Club Application" description="Apply to join the Aldryngton PTA Pool Club for the 2025 season.">
+  <PageHeader
+    title="Pool Club Application"
+    breadcrumbs={[
+      { label: 'Pool Club', href: '/pool-club/' },
+      { label: 'Application' },
+    ]}
+  />
+
+  <!-- Sub Navigation -->
+  <div class="bg-white border-b border-gray-200 sticky top-0 z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex gap-2 py-3 overflow-x-auto" aria-label="Pool Club sections">
+        {subNav.map((item) => (
+          <a
+            href={item.href}
+            class:list={[
+              'px-4 py-2 rounded-full text-sm font-semibold whitespace-nowrap transition-colors duration-200',
+              item.href === currentPath
+                ? 'bg-primary-600 text-white'
+                : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900',
+            ]}
+          >
+            {item.label}
+          </a>
+        ))}
+      </nav>
+    </div>
+  </div>
+
+  <!-- Application Status -->
+  <section class="py-10 md:py-14">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-gradient-to-r from-warm-50 to-warm-100 border border-warm-300 rounded-2xl p-6 sm:p-8 mb-10">
+        <div class="flex items-start gap-4">
+          <div class="flex-shrink-0 bg-warm-400 text-white rounded-xl p-3">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <div>
+            <h2 class="text-xl font-bold text-warm-900 font-heading mb-1">Applications have closed for 2025</h2>
+            <p class="text-warm-800 leading-relaxed">
+              The application window for the 2025 Pool Club season has now closed. Information below is provided for reference. Keep an eye on PTA communications for the 2026 season.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Application Process -->
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 font-heading mb-6">Application Process</h2>
+      <p class="text-gray-600 text-lg mb-8 leading-relaxed">
+        For reference, here is the application process used for the 2025 season.
+      </p>
+
+      <div class="space-y-5 mb-12">
+        <div class="flex items-start gap-5">
+          <div class="flex-shrink-0 w-12 h-12 bg-primary-600 text-white rounded-2xl flex items-center justify-center font-bold text-lg font-heading">1</div>
+          <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-5 flex-1">
+            <h3 class="font-bold text-gray-900 font-heading mb-1">Read the Operating Procedure &amp; Rules</h3>
+            <p class="text-gray-600 leading-relaxed">Familiarise yourself with the Pool Club operating procedures, safety rules, and membership expectations before applying.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-5">
+          <div class="flex-shrink-0 w-12 h-12 bg-primary-600 text-white rounded-2xl flex items-center justify-center font-bold text-lg font-heading">2</div>
+          <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-5 flex-1">
+            <h3 class="font-bold text-gray-900 font-heading mb-1">Complete the online application form</h3>
+            <p class="text-gray-600 leading-relaxed">Fill in the application form with your family details. <strong>You must click SUBMIT</strong> &mdash; the form is not saved automatically.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-5">
+          <div class="flex-shrink-0 w-12 h-12 bg-primary-600 text-white rounded-2xl flex items-center justify-center font-bold text-lg font-heading">3</div>
+          <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-5 flex-1">
+            <h3 class="font-bold text-gray-900 font-heading mb-1">Pay via Crowdfunder</h3>
+            <p class="text-gray-600 leading-relaxed">Complete your payment <strong>immediately after submitting</strong> the application form. The payment link is separate from the application form.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-5">
+          <div class="flex-shrink-0 w-12 h-12 bg-primary-600 text-white rounded-2xl flex items-center justify-center font-bold text-lg font-heading">4</div>
+          <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-5 flex-1">
+            <h3 class="font-bold text-gray-900 font-heading mb-1">Book a resuscitation training session</h3>
+            <p class="text-gray-600 leading-relaxed">All new members must attend a resuscitation training session before the pool season begins. Returning members are encouraged to attend a refresher.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Deadline -->
+      <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 mb-12">
+        <h3 class="font-bold text-gray-900 font-heading mb-3 flex items-center gap-2">
+          <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          Application Deadline
+        </h3>
+        <p class="text-gray-600 leading-relaxed">
+          Applications close at <strong>5pm on 29th April 2025</strong>, or when the membership cap of <strong>85 members</strong> is reached &mdash; whichever comes first.
+        </p>
+      </div>
+
+      <!-- Important Notes -->
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 font-heading mb-6">Important Notes</h2>
+      <div class="bg-gradient-to-r from-red-50 to-warm-50 border border-red-200 rounded-2xl p-6 sm:p-8 mb-12">
+        <ul class="space-y-4 text-gray-700">
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z" />
+            </svg>
+            <span>You <strong>must click SUBMIT</strong> on the application form. It will not be saved or sent automatically.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z" />
+            </svg>
+            <span>The <strong>payment link is separate</strong> from the application form. You must complete both steps to secure your membership.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Guest Information -->
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 font-heading mb-6">Guest Information</h2>
+      <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 sm:p-8 mb-12">
+        <div class="flex items-start gap-4">
+          <div class="flex-shrink-0 w-10 h-10 bg-accent-100 rounded-xl flex items-center justify-center">
+            <svg class="w-5 h-5 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-gray-900 font-heading mb-2">Bringing Guests</h3>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                From June 2024, members may bring up to <strong>2 guests per visit</strong>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                Guest fee: <strong>&pound;3.50 per person</strong> per visit
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                A <strong>visitor disclaimer form</strong> must be completed for each guest
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <div class="bg-gray-50 rounded-2xl border border-gray-100 p-6 sm:p-8 text-center">
+        <h2 class="text-xl font-bold text-gray-900 font-heading mb-2">Questions about applications?</h2>
+        <p class="text-gray-600 mb-4">Contact the Pool Club team for any queries about membership or the application process.</p>
+        <a
+          href="mailto:pool@aldryngtonpta.com"
+          class="inline-flex items-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-primary-700 transition-colors"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          pool@aldryngtonpta.com
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

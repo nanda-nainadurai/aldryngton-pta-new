@@ -1,0 +1,143 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/PageHeader.astro';
+
+const currentPath = '/pool-club/faqs/';
+const subNav = [
+  { label: 'Overview', href: '/pool-club/' },
+  { label: 'FAQs', href: '/pool-club/faqs/' },
+  { label: 'Safety', href: '/pool-club/safety/' },
+  { label: 'Application', href: '/pool-club/application/' },
+];
+
+const faqs = [
+  {
+    question: 'Who can join Pool Club?',
+    answer: 'All Aldryngton families with a child in Foundation through to Year 6 are eligible to join Pool Club. Membership covers the whole family.',
+  },
+  {
+    question: 'How do supervision duties work?',
+    answer: 'Members share either 3 or 5 one-hour supervisory duties at the poolside during the season, depending on membership type. New members must complete 2 shadow duties alongside an experienced supervisor before taking on solo supervision.',
+  },
+  {
+    question: 'Can adults use the pool?',
+    answer: 'Yes, adults can swim and are counted in the bather numbers. The maximum number of bathers is 20 with 2 supervisors on duty, or 35 with 3 supervisors.',
+  },
+  {
+    question: 'Are guests welcome?',
+    answer: 'Yes, from June 2024 each member family may bring up to 2 guests per visit at a cost of \u00A33.50 per person. Guests must not be Aldryngton families (who should join as members instead).',
+  },
+  {
+    question: 'Can family members take my children to the pool?',
+    answer: 'Yes. Grandparents, childminders, friends, and other family members are welcome to bring your children to the pool on your behalf.',
+  },
+  {
+    question: 'Why is the pool only open until 5:30pm on school days?',
+    answer: 'The rota (supervised) sessions end at 5:30pm on school days. However, the pool can remain open for non-rota swimming until 8:00pm Monday to Thursday, where parents supervise their own children.',
+  },
+  {
+    question: 'Why don\u2019t we employ a lifeguard?',
+    answer: 'This has been examined previously. Employing a lifeguard would significantly increase membership costs and would likely limit opening hours. Pool Club works as a community collective where parents share the responsibility, keeping it affordable and accessible for all.',
+  },
+  {
+    question: 'Do I still need to do my duty if it\u2019s raining?',
+    answer: 'Yes, you should still attend your duty if it is raining. The only exception is if there is thunder or lightning, in which case the pool must be closed immediately.',
+  },
+  {
+    question: 'What about inflatables?',
+    answer: 'Inflatables are only permitted when there are 15 swimmers or fewer in the pool. A maximum of 2 inflatables are allowed at any one time, and their use must be agreed by the on-duty supervisor.',
+  },
+  {
+    question: 'What if no one arrives to take over as supervisor?',
+    answer: 'If no replacement supervisor arrives for the next shift, the pool must be closed. Safety is always the top priority.',
+  },
+  {
+    question: 'What happens if there are over 20 bathers?',
+    answer: 'When a 21st child enters the pool area, the accompanying adult must become the 3rd supervisor. The maximum number of bathers with 3 supervisors is 35.',
+  },
+  {
+    question: 'What happens if there are over 35 bathers?',
+    answer: 'The pool is full. Members arriving after this point can wait until other bathers leave before entering the pool.',
+  },
+  {
+    question: 'What about children under 5?',
+    answer: 'Children under 5 are allowed in the pool. However, if you are on supervisory duty, you must arrange for someone else to watch your under-5 while you are supervising, as your full attention must be on the pool.',
+  },
+];
+---
+
+<BaseLayout title="Pool Club FAQs" description="Frequently asked questions about Aldryngton PTA Pool Club membership, duties, and rules.">
+  <PageHeader
+    title="Pool Club FAQs"
+    breadcrumbs={[
+      { label: 'Pool Club', href: '/pool-club/' },
+      { label: 'FAQs' },
+    ]}
+  />
+
+  <!-- Sub Navigation -->
+  <div class="bg-white border-b border-gray-200 sticky top-0 z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex gap-2 py-3 overflow-x-auto" aria-label="Pool Club sections">
+        {subNav.map((item) => (
+          <a
+            href={item.href}
+            class:list={[
+              'px-4 py-2 rounded-full text-sm font-semibold whitespace-nowrap transition-colors duration-200',
+              item.href === currentPath
+                ? 'bg-primary-600 text-white'
+                : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900',
+            ]}
+          >
+            {item.label}
+          </a>
+        ))}
+      </nav>
+    </div>
+  </div>
+
+  <!-- FAQs -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-gray-600 text-lg mb-10 leading-relaxed">
+        Find answers to common questions about Pool Club membership, supervisory duties, guests, and pool rules below.
+      </p>
+
+      <div class="space-y-4">
+        {faqs.map((faq, index) => (
+          <details class="group bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
+            <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none hover:bg-gray-50 transition-colors">
+              <span class="flex items-center gap-4">
+                <span class="flex-shrink-0 w-8 h-8 bg-primary-100 text-primary-700 rounded-lg flex items-center justify-center font-bold text-sm">
+                  {index + 1}
+                </span>
+                <span class="font-bold text-gray-900 font-heading text-left">{faq.question}</span>
+              </span>
+              <svg class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform duration-200 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <div class="px-6 pb-5 pt-0 text-gray-600 leading-relaxed border-t border-gray-100 ml-12">
+              <p class="pt-4">{faq.answer}</p>
+            </div>
+          </details>
+        ))}
+      </div>
+
+      <!-- Contact -->
+      <div class="mt-12 bg-gray-50 rounded-2xl border border-gray-100 p-6 sm:p-8 text-center">
+        <h2 class="text-xl font-bold text-gray-900 font-heading mb-2">Still have questions?</h2>
+        <p class="text-gray-600 mb-4">Get in touch with the Pool Club team and we'll be happy to help.</p>
+        <a
+          href="mailto:pool@aldryngtonpta.com"
+          class="inline-flex items-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-primary-700 transition-colors"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          pool@aldryngtonpta.com
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

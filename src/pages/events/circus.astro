@@ -1,0 +1,62 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/PageHeader.astro';
+---
+
+<BaseLayout title="Circus">
+  <PageHeader
+    title="Circus"
+    breadcrumbs={[
+      { label: 'Events', href: '/events/' },
+      { label: 'Circus' },
+    ]}
+  />
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 space-y-12">
+
+    <!-- Event Status -->
+    <section>
+      <div class="bg-gradient-to-r from-warm-50 to-accent-50 rounded-2xl border border-warm-200 p-6 md:p-8 text-center">
+        <p class="text-sm font-semibold text-warm-500 uppercase tracking-wider mb-1">Last Event</p>
+        <p class="text-2xl font-bold text-gray-900 font-heading">Friday 12th July 2024</p>
+        <p class="mt-2 text-gray-600">The next date is to be confirmed</p>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section>
+      <h2 class="text-2xl font-bold text-gray-900 font-heading mb-4">About the Event</h2>
+      <div class="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 md:p-8">
+        <p class="text-gray-700 leading-relaxed mb-4">
+          Happy's Circus visited Aldryngton on Friday 12th July 2024 for a tremendously
+          successful evening. The next date is to be confirmed.
+        </p>
+        <p class="text-gray-700 leading-relaxed">
+          An all-human show where family-friendly Cabaret meets razzle-dazzle Chicago, bringing
+          the magical world of Circus to every event. It's a spectacular evening of entertainment
+          for the whole family.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section>
+      <div class="bg-gradient-to-br from-primary-50 to-accent-50 rounded-2xl border border-primary-100 p-6 md:p-8">
+        <h2 class="text-2xl font-bold text-gray-900 font-heading mb-3">Get in Touch</h2>
+        <p class="text-gray-700 leading-relaxed mb-4">
+          For questions about future Circus events, please get in touch with the PTA team.
+        </p>
+        <a
+          href="mailto:ptateams@aldryngtonpta.com"
+          class="inline-flex items-center gap-2 bg-primary-600 text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-primary-700 transition-colors"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          Contact ptateams@aldryngtonpta.com
+        </a>
+      </div>
+    </section>
+
+  </div>
+</BaseLayout>

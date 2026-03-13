@@ -1,0 +1,300 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/PageHeader.astro';
+
+const currentPath = '/pool-club/safety/';
+const subNav = [
+  { label: 'Overview', href: '/pool-club/' },
+  { label: 'FAQs', href: '/pool-club/faqs/' },
+  { label: 'Safety', href: '/pool-club/safety/' },
+  { label: 'Application', href: '/pool-club/application/' },
+];
+---
+
+<BaseLayout title="Pool Club Safety & Rules" description="Pool Club safety rules, emergency procedures, and important safety documents.">
+  <PageHeader
+    title="Pool Club Safety & Rules"
+    breadcrumbs={[
+      { label: 'Pool Club', href: '/pool-club/' },
+      { label: 'Safety' },
+    ]}
+  />
+
+  <!-- Sub Navigation -->
+  <div class="bg-white border-b border-gray-200 sticky top-0 z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex gap-2 py-3 overflow-x-auto" aria-label="Pool Club sections">
+        {subNav.map((item) => (
+          <a
+            href={item.href}
+            class:list={[
+              'px-4 py-2 rounded-full text-sm font-semibold whitespace-nowrap transition-colors duration-200',
+              item.href === currentPath
+                ? 'bg-primary-600 text-white'
+                : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900',
+            ]}
+          >
+            {item.label}
+          </a>
+        ))}
+      </nav>
+    </div>
+  </div>
+
+  <!-- Safety Rules -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-gradient-to-r from-red-50 to-warm-50 border border-red-200 rounded-2xl p-6 sm:p-8 mb-10">
+        <div class="flex items-start gap-4">
+          <div class="flex-shrink-0 bg-red-600 text-white rounded-xl p-3">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z" />
+            </svg>
+          </div>
+          <div>
+            <h2 class="text-xl font-bold text-red-900 font-heading mb-1">Safety is Paramount</h2>
+            <p class="text-red-800 leading-relaxed">
+              The safety of all pool users is our highest priority. Please read and follow all rules carefully. Every member is responsible for helping maintain a safe environment.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 font-heading mb-6">Pool Safety Rules</h2>
+      <div class="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden mb-12">
+        <ul class="divide-y divide-gray-100">
+          <li class="flex items-start gap-4 px-6 py-4">
+            <span class="flex-shrink-0 w-8 h-8 bg-primary-100 text-primary-700 rounded-lg flex items-center justify-center font-bold text-sm mt-0.5">1</span>
+            <p class="text-gray-700 leading-relaxed"><strong>Small children and non-swimmers</strong> must stay in the shallow end of the pool at all times.</p>
+          </li>
+          <li class="flex items-start gap-4 px-6 py-4">
+            <span class="flex-shrink-0 w-8 h-8 bg-primary-100 text-primary-700 rounded-lg flex items-center justify-center font-bold text-sm mt-0.5">2</span>
+            <p class="text-gray-700 leading-relaxed"><strong>Older and confident swimmers</strong> should use the deeper end of the pool.</p>
+          </li>
+          <li class="flex items-start gap-4 px-6 py-4">
+            <span class="flex-shrink-0 w-8 h-8 bg-primary-100 text-primary-700 rounded-lg flex items-center justify-center font-bold text-sm mt-0.5">3</span>
+            <p class="text-gray-700 leading-relaxed"><strong>No games that submerge children</strong> are permitted. This includes dunking, pushing underwater, or any rough play.</p>
+          </li>
+          <li class="flex items-start gap-4 px-6 py-4">
+            <span class="flex-shrink-0 w-8 h-8 bg-primary-100 text-primary-700 rounded-lg flex items-center justify-center font-bold text-sm mt-0.5">4</span>
+            <p class="text-gray-700 leading-relaxed"><strong>Parents must supervise their own children</strong> at all times. The duty supervisor is not a lifeguard or babysitter.</p>
+          </li>
+          <li class="flex items-start gap-4 px-6 py-4">
+            <span class="flex-shrink-0 w-8 h-8 bg-primary-100 text-primary-700 rounded-lg flex items-center justify-center font-bold text-sm mt-0.5">5</span>
+            <p class="text-gray-700 leading-relaxed"><strong>Supervisors must have their full attention on the pool</strong> at all times during their duty. No mobile phone use, reading, or other distractions.</p>
+          </li>
+          <li class="flex items-start gap-4 px-6 py-4">
+            <span class="flex-shrink-0 w-8 h-8 bg-primary-100 text-primary-700 rounded-lg flex items-center justify-center font-bold text-sm mt-0.5">6</span>
+            <p class="text-gray-700 leading-relaxed"><strong>Equipment must be used sensibly.</strong> Woggles are for flotation support, not for hitting others.</p>
+          </li>
+          <li class="flex items-start gap-4 px-6 py-4">
+            <span class="flex-shrink-0 w-8 h-8 bg-primary-100 text-primary-700 rounded-lg flex items-center justify-center font-bold text-sm mt-0.5">7</span>
+            <p class="text-gray-700 leading-relaxed"><strong>Sinking rings</strong> should only be used for their intended purpose (diving practice).</p>
+          </li>
+          <li class="flex items-start gap-4 px-6 py-4">
+            <span class="flex-shrink-0 w-8 h-8 bg-primary-100 text-primary-700 rounded-lg flex items-center justify-center font-bold text-sm mt-0.5">8</span>
+            <p class="text-gray-700 leading-relaxed"><strong>Be considerate of people sat in chairs</strong> around the pool. Avoid excessive splashing near the pool edge.</p>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Accidents & Emergency -->
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 font-heading mb-6">Accidents &amp; Emergency Procedures</h2>
+
+      <div class="space-y-6 mb-12">
+        <!-- First Aid -->
+        <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-6">
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-10 h-10 bg-primary-100 rounded-xl flex items-center justify-center">
+              <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-gray-900 font-heading mb-2">First Aid</h3>
+              <p class="text-gray-600 leading-relaxed">A first aid kit is located in the Pool cupboard. All accidents must be recorded in the accident book.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Resuscitation -->
+        <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-6">
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-10 h-10 bg-accent-100 rounded-xl flex items-center justify-center">
+              <svg class="w-5 h-5 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-gray-900 font-heading mb-2">Resuscitation Charts</h3>
+              <p class="text-gray-600 leading-relaxed">Resuscitation flow charts are displayed around the pool area. Please familiarise yourself with these when you visit.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Whistle Policy -->
+        <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-6">
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-10 h-10 bg-warm-100 rounded-xl flex items-center justify-center">
+              <svg class="w-5 h-5 text-warm-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-gray-900 font-heading mb-2">Whistle Policy</h3>
+              <div class="space-y-2">
+                <div class="flex items-center gap-3">
+                  <span class="inline-flex items-center justify-center bg-warm-100 text-warm-700 font-bold text-sm px-3 py-1 rounded-full">1 blow</span>
+                  <span class="text-gray-600">Stop, look, and listen &mdash; await instructions from the supervisor.</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="inline-flex items-center justify-center bg-red-100 text-red-700 font-bold text-sm px-3 py-1 rounded-full">2 blows</span>
+                  <span class="text-gray-600">Everyone out of the pool immediately.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Head Bumps -->
+        <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-6">
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-10 h-10 bg-primary-100 rounded-xl flex items-center justify-center">
+              <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-gray-900 font-heading mb-2">Head Bumps</h3>
+              <p class="text-gray-600 leading-relaxed">Action for head bumps is at the discretion of the parent or duty person. If in doubt, seek medical advice.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bodily Waste -->
+        <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-6">
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-10 h-10 bg-red-100 rounded-xl flex items-center justify-center">
+              <svg class="w-5 h-5 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-gray-900 font-heading mb-2">Bodily Waste in Pool</h3>
+              <p class="text-gray-600 leading-relaxed">Clear the pool immediately and close it. Remove the waste, then notify the Site Controller. The pool must not reopen until it has been properly treated.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Evacuation -->
+        <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-6">
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-10 h-10 bg-accent-100 rounded-xl flex items-center justify-center">
+              <svg class="w-5 h-5 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-gray-900 font-heading mb-2">Evacuation Assembly Point</h3>
+              <p class="text-gray-600 leading-relaxed">In the event of an evacuation, proceed to the gazebo / junior playground area.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Defibrillator -->
+        <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-6">
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-10 h-10 bg-red-100 rounded-xl flex items-center justify-center">
+              <svg class="w-5 h-5 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-gray-900 font-heading mb-2">Defibrillator Locations</h3>
+              <ul class="text-gray-600 space-y-1">
+                <li class="flex items-start gap-2">
+                  <svg class="w-4 h-4 text-primary-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  Outside the pool gates on the brick wall
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-4 h-4 text-primary-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  Inside the school office foyer
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Resuscitation Training -->
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 font-heading mb-6">Resuscitation Training</h2>
+      <div class="bg-gradient-to-r from-primary-50 to-primary-100 border border-primary-200 rounded-2xl p-6 sm:p-8 mb-12">
+        <p class="text-gray-700 leading-relaxed mb-3">
+          All new members are required to attend a resuscitation training session before the pool season begins. These sessions are organised by the Pool Club committee and cover poolside rescue techniques and CPR.
+        </p>
+        <p class="text-gray-700 leading-relaxed">
+          Returning members are strongly encouraged to attend a refresher session each year to keep their skills up to date.
+        </p>
+      </div>
+
+      <!-- Important Documents -->
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 font-heading mb-6">Important Documents</h2>
+      <div class="grid sm:grid-cols-3 gap-5 mb-12">
+        <a href="#" class="group flex items-center gap-4 bg-white rounded-2xl border border-gray-200 shadow-sm p-6 hover:border-primary-200 hover:shadow-md transition-all duration-200">
+          <div class="flex-shrink-0 w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center group-hover:bg-primary-200 transition-colors">
+            <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-gray-900 font-heading group-hover:text-primary-700 transition-colors">Operating Procedure &amp; Rules</h3>
+            <p class="text-sm text-gray-500">Full operating procedures</p>
+          </div>
+        </a>
+        <a href="#" class="group flex items-center gap-4 bg-white rounded-2xl border border-gray-200 shadow-sm p-6 hover:border-primary-200 hover:shadow-md transition-all duration-200">
+          <div class="flex-shrink-0 w-12 h-12 bg-accent-100 rounded-xl flex items-center justify-center group-hover:bg-accent-200 transition-colors">
+            <svg class="w-6 h-6 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-gray-900 font-heading group-hover:text-accent-700 transition-colors">Risk Assessment</h3>
+            <p class="text-sm text-gray-500">Pool risk assessment document</p>
+          </div>
+        </a>
+        <a href="#" class="group flex items-center gap-4 bg-white rounded-2xl border border-gray-200 shadow-sm p-6 hover:border-primary-200 hover:shadow-md transition-all duration-200">
+          <div class="flex-shrink-0 w-12 h-12 bg-warm-100 rounded-xl flex items-center justify-center group-hover:bg-warm-200 transition-colors">
+            <svg class="w-6 h-6 text-warm-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-gray-900 font-heading group-hover:text-warm-600 transition-colors">Visitor Disclaimer Form</h3>
+            <p class="text-sm text-gray-500">Required for all guests</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Contact -->
+      <div class="bg-gray-50 rounded-2xl border border-gray-100 p-6 sm:p-8 text-center">
+        <h2 class="text-xl font-bold text-gray-900 font-heading mb-2">Safety Concerns?</h2>
+        <p class="text-gray-600 mb-4">If you have any safety concerns or questions, please contact the Pool Club team.</p>
+        <a
+          href="mailto:pool@aldryngtonpta.com"
+          class="inline-flex items-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-primary-700 transition-colors"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          pool@aldryngtonpta.com
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
