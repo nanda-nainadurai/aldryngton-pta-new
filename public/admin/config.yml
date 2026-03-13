@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: your-org/aldryngton-pta  # UPDATE: Change to your GitHub repo
+  repo: nanda-nainadurai/aldryngton-pta-new
   branch: main
   auth_endpoint: /api/auth  # For Netlify Identity, or use GitHub OAuth
 
@@ -10,7 +10,7 @@ local_backend: true
 media_folder: public/uploads
 public_folder: /uploads
 
-site_url: https://aldryngtonpta.com
+site_url: https://nanda-nainadurai.github.io/aldryngton-pta-new
 
 collections:
   - name: pages
