@@ -4,24 +4,24 @@ import PageHeader from '../../components/PageHeader.astro';
 import { url } from '../../utils';
 
 const recentReports = [
-  { date: '09 Jun 2023', title: "PTA Treasurer\u2019s Report", file: '20230609-PTA-Treasurers-Report-%E2%80%93-09-Jun-2023.pdf' },
+  { date: '09 Jun 2023', title: "PTA Treasurer\u2019s Report", file: '20230609-PTA-Treasurers-Report-09-Jun-2023.pdf' },
   { date: 'Apr 2023', title: "PTA Treasurer\u2019s Report", file: 'PTA-Treasurers-Report-Apr2023.pdf' },
   { date: 'Feb 2023', title: "PTA Treasurer\u2019s Report", file: 'PTA-Treasurers-Report-Feb-2023.pdf' },
-  { date: 'Jan 2023', title: "PTA Treasurer\u2019s Report", file: 'PTA-Treasurers-Report-%E2%80%93-Jan-2023.pdf' },
+  { date: 'Jan 2023', title: "PTA Treasurer\u2019s Report", file: 'PTA-Treasurers-Report-Jan-2023.pdf' },
 ];
 
 const olderReports: Record<string, { date: string; title: string; file: string }[]> = {
   '2022': [
-    { date: 'Nov 2022', title: "PTA Treasurer\u2019s Report", file: 'PTA-Treasurers-Report-%E2%80%93-Nov-2022.pdf' },
+    { date: 'Nov 2022', title: "PTA Treasurer\u2019s Report", file: 'PTA-Treasurers-Report-Nov-2022.pdf' },
     { date: '28 Apr 2022', title: "PTA Treasurer\u2019s Report", file: 'PTA-Treasurers-Report-28Apr2022.pdf' },
     { date: 'Mar 2022', title: "PTA Treasurer\u2019s Report", file: 'PTA-Treasurers-Report-Mar2022.pdf' },
     { date: '12 Jan 2022', title: 'PTA Finance Summary', file: 'PTA-Meeting-12Jan2022-Finance-Summary.pdf' },
   ],
   '2021': [
-    { date: 'Nov 2021', title: "PTA Treasurer\u2019s Report", file: 'PTA-Treasurers-Report-%E2%80%93-Nov-2021.pdf' },
-    { date: 'Jun 2021', title: "PTA Treasurer\u2019s Report", file: 'PTA-Treasurers-Report-%E2%80%93-Jun-2021.pdf' },
-    { date: 'May 2021', title: "PTA Treasurer\u2019s Report", file: 'PTA-Treasurers-Report-%E2%80%93-May-2021.pdf' },
-    { date: 'Mar 2021', title: "PTA Treasurer\u2019s Report", file: 'PTA-Treasurers-Report-%E2%80%93-Mar-2021.pdf' },
+    { date: 'Nov 2021', title: "PTA Treasurer\u2019s Report", file: 'PTA-Treasurers-Report-Nov-2021.pdf' },
+    { date: 'Jun 2021', title: "PTA Treasurer\u2019s Report", file: 'PTA-Treasurers-Report-Jun-2021.pdf' },
+    { date: 'May 2021', title: "PTA Treasurer\u2019s Report", file: 'PTA-Treasurers-Report-May-2021.pdf' },
+    { date: 'Mar 2021', title: "PTA Treasurer\u2019s Report", file: 'PTA-Treasurers-Report-Mar-2021.pdf' },
     { date: 'Jan 2021', title: "PTA Treasurer\u2019s Report", file: '20210101-PTA-Treasurer-Report-Jan-2021.pdf' },
   ],
   '2020': [
